@@ -1,0 +1,95 @@
+extends CharacterBody2D
+
+var Speed = 100
+var LastDirection = Vector2.ZERO
+var AnimatedSprite
+var EnemyInRange=false
+var Health = 100
+var Dead=false
+var Attacking=false
+var AttackTimer=0.0
+var AttackDuration=0.3
+var KnockBack = 1
+
+func _ready():
+	AnimatedSprite = $AnimatedSprite2D
+	add_to_group("Player")
+
+func _physics_process(delta):
+	#UpdateHealth()
+	#Die()
+	UpdateAnimation()
+	move_and_slide()
+	if Attacking:
+		AttackTimer+=delta
+		velocity=Vector2.ZERO
+	if AttackTimer>=AttackDuration:
+		Attacking=false
+		AttackTimer=0.0
+	
+func UpdateAnimation():
+	if Dead:
+		velocity=Vector2.ZERO
+		return
+	
+	if Attacking:
+		if LastDirection.y<0:
+			AnimatedSprite.play("AttackUp")
+		elif LastDirection.y>0:
+			AnimatedSprite.play("AttackDown")
+		elif LastDirection.x !=0:
+			AnimatedSprite.play("AttackRight")
+		return
+	var Direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
+	velocity = Direction*Speed
+	
+	if Direction != Vector2.ZERO:
+		LastDirection=Direction
+	
+	if Direction.x!=0:
+		AnimatedSprite.play("WalkRight")
+	elif Direction.y <0:
+		AnimatedSprite.play("WalkUp")
+	elif Direction.y >0:
+		AnimatedSprite.play("WalkDown")
+	else:
+		if LastDirection.x !=0:
+			AnimatedSprite.play("IdleRight")
+		elif LastDirection.y <0:
+			AnimatedSprite.play("IdleUp")
+		elif LastDirection.y >0:
+			AnimatedSprite.play("IdleDown")
+	AnimatedSprite.flip_h = LastDirection.x <0
+
+func _input(event):
+	if event.is_action_pressed("ui_select"):
+		Attacking=true
+		AttackTimer=0.0
+	
+func UpdateHealth():
+	var HealthBar = $HealthBar
+	HealthBar.value = Health
+	if Health>=100:
+		HealthBar.visible = false
+	else:
+		HealthBar.visible = true
+
+func Die():
+	if Health<=0 and not Dead:
+		Dead=true
+		AnimatedSprite.play("Die")
+
+func _on_hitbox_body_entered(body):
+	if body.is_in_group("Enemy"):
+		EnemyInRange=true
+
+
+
+func _on_hitbox_body_exited(body):
+	if body.is_in_group("Enemy"):
+		EnemyInRange=false
+
+
+func _on_animated_sprite_2d_animation_finished():
+	if AnimatedSprite.animation =="Die":
+		queue_free()

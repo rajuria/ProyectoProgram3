@@ -1,3 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698697958
+::res://::1698711668
 icon.svg::CompressedTexture2D::8269338123927388465::1698697817::1698697958::1::::<><>::
+::res://Entities/::1698711500
+player.tscn::PackedScene::2407078115056978892::1698711488::0::1::::<><>::
+::res://Sprites/::1698711668
+Link_Walking.png::CompressedTexture2D::3536748714958594213::1698711662::1698711668::1::::<><>::
+::res://WorldScenes/::1698711405
+overworld.tscn::PackedScene::18472072008951871::1698711405::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>uid://c3iapm6tyfeg0::::res://WorldTilesets/forest_ [resources].png
+::res://WorldTilesets/::1698710443
+forest_ [bridgeHorizontal].png::CompressedTexture2D::7268084770495581877::1698710443::1698710443::1::::<><>::
+forest_ [bridgeVertical].png::CompressedTexture2D::2326571853367740395::1698710434::1698710434::1::::<><>::
+forest_ [resources].png::CompressedTexture2D::6754671477256845629::1698710425::1698710425::1::::<><>::
+forest_.png::CompressedTexture2D::7831226173424330124::1698710400::1698710400::1::::<><>::

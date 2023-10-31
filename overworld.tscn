@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://i7h5tngdyd8"]
-
-[sub_resource type="TileSet" id="TileSet_0n0xo"]
-
-[node name="Overworld" type="Node2D"]
-
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_0n0xo")
-format = 2
