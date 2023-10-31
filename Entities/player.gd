@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var Speed = 100
+var Speed = 150
 var LastDirection = Vector2.ZERO
 var AnimatedSprite
 var EnemyInRange=false
