@@ -1,14 +1,14 @@
 extends CharacterBody2D
 
-var Speed = 150
+var Speed = 140
 var LastDirection = Vector2.ZERO
 var AnimatedSprite
 var EnemyInRange=false
-var Health = 100
+var Health = 150
 var Dead=false
 var Attacking=false
 var AttackTimer=0.0
-var AttackDuration=0.3
+var AttackDuration=0.2
 var KnockBack = 1
 
 func _ready():
@@ -16,8 +16,8 @@ func _ready():
 	add_to_group("Player")
 
 func _physics_process(delta):
-	#UpdateHealth()
-	#Die()
+	UpdateHealth()
+	Die()
 	UpdateAnimation()
 	move_and_slide()
 	if Attacking:
@@ -59,7 +59,7 @@ func UpdateAnimation():
 			AnimatedSprite.play("IdleUp")
 		elif LastDirection.y >0:
 			AnimatedSprite.play("IdleDown")
-	AnimatedSprite.flip_h = LastDirection.x <0
+	AnimatedSprite.flip_h = LastDirection.x >0
 
 func _input(event):
 	if event.is_action_pressed("ui_select"):

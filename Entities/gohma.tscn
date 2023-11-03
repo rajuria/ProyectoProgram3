@@ -1,0 +1,157 @@
+[gd_scene load_steps=19 format=3 uid="uid://ce1a80lokxmpl"]
+
+[ext_resource type="Script" path="res://Entities/gohma.gd" id="1_hy5is"]
+[ext_resource type="Texture2D" uid="uid://b4l0g4dnfkyqv" path="res://Sprites/Gohma.png" id="1_uuk3u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm0of"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(4, 0, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jot3"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(76, 0, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30lqq"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(148, 0, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4gtg"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(220, 0, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0rdq"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(4, 180, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_naana"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(76, 180, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_867q4"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(148, 180, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xymrn"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(220, 180, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m33fu"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(4, 90, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crr6x"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(76, 90, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovbay"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(148, 90, 72, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhcw7"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(220, 90, 72, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6pd5f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cm0of")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jot3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30lqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4gtg")
+}],
+"loop": true,
+"name": &"WalkingDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0rdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_naana")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_867q4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xymrn")
+}],
+"loop": true,
+"name": &"WalkingRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m33fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crr6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovbay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhcw7")
+}],
+"loop": true,
+"name": &"WalkingUp",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mo3i4"]
+radius = 6.0
+height = 18.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ug0cd"]
+radius = 12.0
+height = 58.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2qclf"]
+radius = 129.19
+
+[node name="Gohma" type="CharacterBody2D"]
+script = ExtResource("1_hy5is")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6pd5f")
+animation = &"WalkingDown"
+autoplay = "WalkingDown"
+frame_progress = 0.13692
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mo3i4")
+
+[node name="GohmaHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GohmaHitbox"]
+position = Vector2(0, -2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ug0cd")
+
+[node name="GohmaTerritory" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GohmaTerritory"]
+shape = SubResource("CircleShape2D_2qclf")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0, 1, 0, 1)
+offset_left = -28.0
+offset_top = -23.0
+offset_right = 28.0
+offset_bottom = -18.0
+show_percentage = false
+
+[connection signal="body_entered" from="GohmaHitbox" to="." method="_on_gohma_hitbox_body_entered"]
+[connection signal="body_exited" from="GohmaHitbox" to="." method="_on_gohma_hitbox_body_exited"]
+[connection signal="body_entered" from="GohmaTerritory" to="." method="_on_gohma_territory_body_entered"]
+[connection signal="body_exited" from="GohmaTerritory" to="." method="_on_gohma_territory_body_exited"]
