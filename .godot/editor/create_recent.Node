@@ -1,3 +1,8 @@
+Button
+AudioStreamPlayer2D
+CanvasLayer
+RichTextLabel
+TextureRect
 ProgressBar
 CollisionShape2D
 Area2D

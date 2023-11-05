@@ -65,6 +65,9 @@ func _input(event):
 	if event.is_action_pressed("ui_select"):
 		Attacking=true
 		AttackTimer=0.0
+		$AttackSound.play()
+	if event.is_action_pressed("ui_cancel"):
+		Health=-100
 	
 func UpdateHealth():
 	var HealthBar = $HealthBar
@@ -77,7 +80,8 @@ func UpdateHealth():
 func Die():
 	if Health<=0 and not Dead:
 		Dead=true
-		AnimatedSprite.play("Die")
+		AnimatedSprite.play("Death")
+		$Death.play()
 
 func _on_hitbox_body_entered(body):
 	if body.is_in_group("Enemy"):
@@ -91,5 +95,5 @@ func _on_hitbox_body_exited(body):
 
 
 func _on_animated_sprite_2d_animation_finished():
-	if AnimatedSprite.animation =="Die":
+	if AnimatedSprite.animation =="Death":
 		queue_free()

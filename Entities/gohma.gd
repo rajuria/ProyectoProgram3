@@ -25,11 +25,15 @@ func _ready():
 	add_to_group("Enemy")
 	
 func _physics_process(delta):
+	if Dead:
+		AnimatedSprite.play("Death")
+		return
 	if PlayerInRange and Player.Attacking:
 		DamageFromPlayerTimer+=delta
 	if DamageFromPlayerTimer>=DamagefromPlayerInterval and Player.Attacking:
 		Health-=10
-		print("Gohma Health: ",Health)
+		KnockBack(Player.LastDirection)
+		$Hit.play()
 		DamageFromPlayerTimer=0.0
 	UpdateHealth()
 	Die()
@@ -56,6 +60,7 @@ func _physics_process(delta):
 		DamageTimer+=delta
 	if DamageTimer>=DamageInterval:
 		Player.Health-=10
+		$PlayerHit.play()
 		DamageTimer=0.0
 		
 func UpdateAnimation(Direction):
@@ -66,6 +71,16 @@ func UpdateAnimation(Direction):
 		AnimatedSprite.play("WalkingUp")
 	elif Direction.y>0:
 		AnimatedSprite.play("WalkingDown")
+func KnockBack(Direction):
+	if Direction.x>0:
+		position.x+=20*Player.KnockBack
+	elif Direction.x<0:
+		position.x-=20*Player.KnockBack
+	elif Direction.y>0:
+		position.y+=20*Player.KnockBack
+	elif Direction.y<0:
+		position.y-=20*Player.KnockBack
+	
 
 func PickRandomDirection():
 	var NewDirection = Vector2.ZERO
@@ -84,8 +99,9 @@ func UpdateHealth():
 		
 func Die():
 	if Health<=0 and not Dead:
+		$Death.play()
 		Dead=true
-		queue_free()
+		#queue_free()
 
 
 func _on_gohma_hitbox_body_entered(body):
@@ -109,3 +125,9 @@ func _on_gohma_territory_body_exited(body):
 		Attacking=false
 		PickRandomDirection()
 		UpdateAnimation(LastDirection)
+	
+
+
+func _on_animated_sprite_2d_animation_finished():
+	if AnimatedSprite.animation=="Death":
+		queue_free()

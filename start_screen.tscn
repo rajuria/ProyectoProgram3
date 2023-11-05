@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct00cw8vc55rj"]
+
+[ext_resource type="Script" path="res://start_screen.gd" id="1_iqooh"]
+[ext_resource type="Texture2D" uid="uid://b2w3rj0mlqgi5" path="res://Images/zelda-background-rkp03okh2d43ik06.jpg" id="2_pbq44"]
+[ext_resource type="Texture2D" uid="uid://ljb00jknxsc6" path="res://Images/Zelda_Logo.svg.png" id="3_82ycf"]
+[ext_resource type="AudioStream" uid="uid://qm8yjmrj4rjk" path="res://Sounds/Soundtrack/TitleTheme.mp3" id="4_1dnv4"]
+
+[node name="StartScreen" type="CanvasLayer"]
+script = ExtResource("1_iqooh")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(575, 327.5)
+scale = Vector2(0.606482, 0.606482)
+texture = ExtResource("2_pbq44")
+
+[node name="Start" type="Button" parent="."]
+offset_left = 527.0
+offset_top = 381.0
+offset_right = 623.0
+offset_bottom = 412.0
+text = "Start Game"
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(572, 160)
+scale = Vector2(0.466507, 0.466507)
+texture = ExtResource("3_82ycf")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_1dnv4")
+volume_db = 5.0
+autoplay = true
+
+[node name="DeveloperOptions" type="Button" parent="."]
+offset_left = 13.0
+offset_top = 553.0
+offset_right = 166.0
+offset_bottom = 584.0
+text = "Developer Options"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 499.0
+offset_top = 230.0
+offset_right = 791.0
+offset_bottom = 270.0
+text = "Ver Alpha 0.1104"
+tab_size = 5
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="DeveloperOptions" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="DeveloperOptions" to="." method="_on_developer_options_pressed"]

@@ -1,17 +1,37 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698986925
+::res://::1699154345
+developer_options.gd::GDScript::-1::1699153965::0::1::::<>CanvasLayer<>::
+developer_options.tscn::PackedScene::4880199437570236388::1699153967::0::1::::<><>::res://developer_options.gd<>uid://be781skxk3xse::::res://Sounds/Soundtrack/Fairy Fountain.mp3<>uid://gr48paadgh8v::::res://Images/The-Legend-of-Zelda-Tears-of-the-Kingdom-Screenshot-019.jpg
 icon.svg::CompressedTexture2D::8269338123927388465::1698697817::1698980723::1::::<><>::
-::res://Entities/::1698986925
-gohma.gd::GDScript::-1::1698986371::0::1::::<>CharacterBody2D<>::
-gohma.tscn::PackedScene::5107330825469727249::1698986525::0::1::::<><>::res://Entities/gohma.gd<>uid://b4l0g4dnfkyqv::::res://Sprites/Gohma.png
-player.gd::GDScript::-1::1698986489::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::2407078115056978892::1698986525::0::1::::<><>::res://Entities/player.gd<>uid://bqnhy8hdw6exp::::res://Sprites/Link_Walking.png
-::res://Sprites/::1698986925
+start_screen.gd::GDScript::-1::1699153787::0::1::::<>CanvasLayer<>::
+start_screen.tscn::PackedScene::6159561544217563059::1699153967::0::1::::<><>::res://start_screen.gd<>uid://b2w3rj0mlqgi5::::res://Images/zelda-background-rkp03okh2d43ik06.jpg<>uid://ljb00jknxsc6::::res://Images/Zelda_Logo.svg.png<>uid://qm8yjmrj4rjk::::res://Sounds/Soundtrack/TitleTheme.mp3
+::res://Entities/::1699153967
+gohma.gd::GDScript::-1::1699152523::0::1::::<>CharacterBody2D<>::
+gohma.tscn::PackedScene::5107330825469727249::1699153967::0::1::::<><>::res://Entities/gohma.gd<>uid://b4l0g4dnfkyqv::::res://Sprites/Gohma.png<>uid://bv2v1xb5q42hq::::res://Sounds/Effects/enemy-hit.mp3<>uid://uein7k2m6biu::::res://Sounds/Effects/enemy-death.mp3<>uid://cnr61ldh742th::::res://Sounds/Effects/link-hurt.mp3
+player.gd::GDScript::-1::1699148547::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::2407078115056978892::1699153967::0::1::::<><>::res://Entities/player.gd<>uid://bcax86bfiwoo4::::res://Sprites/Link1.png<>uid://dsbmg4xp70iit::::res://Sounds/Effects/fighter-sword.mp3<>uid://c1viup2g7ynp6::::res://Sounds/Effects/link-death.mp3<>uid://cnr61ldh742th::::res://Sounds/Effects/link-hurt.mp3
+::res://Images/::1699153724
+The-Legend-of-Zelda-Tears-of-the-Kingdom-Screenshot-019.jpg::CompressedTexture2D::458047995490805747::1699153690::1699153724::1::::<><>::
+zelda-background-rkp03okh2d43ik06.jpg::CompressedTexture2D::4328666718693957302::1699150012::1699150019::1::::<><>::
+Zelda_Logo.svg.png::CompressedTexture2D::790763369104927923::1699149894::1699149894::1::::<><>::
+::res://Sounds/::1699151515
+::res://Sounds/Effects/::1699147884
+enemy-death.mp3::AudioStreamMP3::1412545032479043264::1699147884::1699147884::1::::<><>::
+enemy-hit.mp3::AudioStreamMP3::3917447297908491218::1699147880::1699147880::1::::<><>::
+fighter-sword.mp3::AudioStreamMP3::8425466492427514795::1699147382::1699147383::1::::<><>::
+link-death.mp3::AudioStreamMP3::6641625516506834577::1699147623::1699147623::1::::<><>::
+link-hurt.mp3::AudioStreamMP3::5722319996670174209::1699147875::1699147876::1::::<><>::
+::res://Sounds/Soundtrack/::1699153711
+Fairy Fountain.mp3::AudioStreamMP3::2735287199705816612::1699153274::1699153587::1::::<><>::
+TitleTheme.mp3::AudioStreamMP3::1149841043105639576::1699150780::1699153601::1::::<><>::
+Uncharted Territory.mp3::AudioStreamMP3::564196197785167653::1699151737::1699153616::1::::<><>::
+::res://Sprites/::1699154345
 Gohma.png::CompressedTexture2D::4446135472482619669::1698984728::1698984738::1::::<><>::
 Link1.png::CompressedTexture2D::2528255423009064129::1698986921::1698986926::1::::<><>::
+Link_Misc.png::CompressedTexture2D::8511044331513929445::1699154337::1699154345::1::::<><>::
 Link_Walking.png::CompressedTexture2D::3536748714958594213::1698711662::1698711668::1::::<><>::
-::res://WorldScenes/::1698986630
-overworld.tscn::PackedScene::18472072008951871::1698986630::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>uid://c3iapm6tyfeg0::::res://WorldTilesets/forest_ [resources].png<>uid://bakahv7sr78hk::::res://Entities/player.tscn<>uid://8fakfct0hgx4::::res://WorldTilesets/forest_ [bridgeVertical].png<>uid://dbsykag01g4cn::::res://WorldTilesets/forest_ [bridgeHorizontal].png<>uid://ce1a80lokxmpl::::res://Entities/gohma.tscn
+::res://WorldScenes/::1699153967
+overworld.tscn::PackedScene::18472072008951871::1699153967::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>uid://c3iapm6tyfeg0::::res://WorldTilesets/forest_ [resources].png<>uid://bakahv7sr78hk::::res://Entities/player.tscn<>uid://8fakfct0hgx4::::res://WorldTilesets/forest_ [bridgeVertical].png<>uid://dbsykag01g4cn::::res://WorldTilesets/forest_ [bridgeHorizontal].png<>uid://ce1a80lokxmpl::::res://Entities/gohma.tscn<>uid://ibkh1wsxmdpl::::res://Sounds/Soundtrack/Uncharted Territory.mp3
 ::res://WorldTilesets/::1698984738
 forest_ [bridgeHorizontal].png::CompressedTexture2D::7268084770495581877::1698710443::1698710443::1::::<><>::
 forest_ [bridgeVertical].png::CompressedTexture2D::2326571853367740395::1698710434::1698710434::1::::<><>::

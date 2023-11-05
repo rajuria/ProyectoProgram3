@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://i7h5tngdyd8"]
+[gd_scene load_steps=13 format=3 uid="uid://i7h5tngdyd8"]
 
 [ext_resource type="Texture2D" uid="uid://djtrfep0uyt4g" path="res://WorldTilesets/forest_.png" id="1_twtr3"]
 [ext_resource type="Texture2D" uid="uid://c3iapm6tyfeg0" path="res://WorldTilesets/forest_ [resources].png" id="2_wo1kl"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://8fakfct0hgx4" path="res://WorldTilesets/forest_ [bridgeVertical].png" id="3_ntd64"]
 [ext_resource type="Texture2D" uid="uid://dbsykag01g4cn" path="res://WorldTilesets/forest_ [bridgeHorizontal].png" id="4_qbife"]
 [ext_resource type="PackedScene" uid="uid://ce1a80lokxmpl" path="res://Entities/gohma.tscn" id="6_xkeqj"]
+[ext_resource type="AudioStream" uid="uid://ibkh1wsxmdpl" path="res://Sounds/Soundtrack/Uncharted Territory.mp3" id="7_pg8p1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xckk0"]
 texture = ExtResource("1_twtr3")
@@ -679,7 +680,7 @@ zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = 0
 limit_right = 576
-limit_bottom = 320
+limit_bottom = 340
 limit_smoothed = true
 
 [node name="Gohma" parent="TileMap" instance=ExtResource("6_xkeqj")]
@@ -693,3 +694,8 @@ scale = Vector2(0.5, 0.5)
 [node name="Gohma3" parent="TileMap" instance=ExtResource("6_xkeqj")]
 position = Vector2(182, 160)
 scale = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_pg8p1")
+volume_db = -2.0
+autoplay = true
