@@ -72,7 +72,7 @@ func _input(event):
 func UpdateHealth():
 	var HealthBar = $HealthBar
 	HealthBar.value = Health
-	if Health>=100:
+	if Health>=150:
 		HealthBar.visible = false
 	else:
 		HealthBar.visible = true

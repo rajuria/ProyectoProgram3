@@ -1,9 +1,7 @@
-res://Entities/player.tscn
-res://Entities/player.gd
-res://WorldScenes/overworld.tscn
 res://Entities/gohma.tscn
 res://Entities/gohma.gd
-res://start_screen.gd
+res://WorldScenes/overworld.tscn
+res://Entities/player.tscn
 res://start_screen.tscn
 res://developer_options.tscn
-res://developer_options.gd
+res://Entities/player.gd

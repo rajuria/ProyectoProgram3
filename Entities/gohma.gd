@@ -7,7 +7,7 @@ var AnimatedSprite
 var DirectionChangeTimer=0
 var DirectionChangeInterval =3 #Seconds!
 var MinPosition = Vector2(10,10) #Boundaries
-var MaxPosition = Vector2(375,550)
+var MaxPosition = Vector2(320,550)
 var Attacking = false
 var Player = null
 var PlayerInRange = false
@@ -16,7 +16,8 @@ var Dead = false
 var DamageTimer=0.0
 var DamageInterval=0.5
 var DamageFromPlayerTimer=0.0
-var DamagefromPlayerInterval=0.2
+var DamagefromPlayerInterval=0.1
+var EnemyKnockBack=0
 
 
 func _ready():
@@ -31,7 +32,7 @@ func _physics_process(delta):
 	if PlayerInRange and Player.Attacking:
 		DamageFromPlayerTimer+=delta
 	if DamageFromPlayerTimer>=DamagefromPlayerInterval and Player.Attacking:
-		Health-=10
+		Health-=25
 		KnockBack(Player.LastDirection)
 		$Hit.play()
 		DamageFromPlayerTimer=0.0
@@ -62,6 +63,7 @@ func _physics_process(delta):
 		Player.Health-=10
 		$PlayerHit.play()
 		DamageTimer=0.0
+		PlayerKnockBack(LastDirection)
 		
 func UpdateAnimation(Direction):
 	if Direction.x !=0:
@@ -71,6 +73,7 @@ func UpdateAnimation(Direction):
 		AnimatedSprite.play("WalkingUp")
 	elif Direction.y>0:
 		AnimatedSprite.play("WalkingDown")
+		
 func KnockBack(Direction):
 	if Direction.x>0:
 		position.x+=20*Player.KnockBack
@@ -80,7 +83,15 @@ func KnockBack(Direction):
 		position.y+=20*Player.KnockBack
 	elif Direction.y<0:
 		position.y-=20*Player.KnockBack
-	
+func PlayerKnockBack(Direction):
+	if Direction.x>0:
+		Player.position.x+=20*EnemyKnockBack
+	elif Direction.x<0:
+		Player.position.x-=20*EnemyKnockBack
+	elif Direction.y>0:
+		Player.position.y+=20*EnemyKnockBack
+	elif Direction.y<0:
+		Player.position.y-=20*EnemyKnockBack
 
 func PickRandomDirection():
 	var NewDirection = Vector2.ZERO
