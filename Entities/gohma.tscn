@@ -1,7 +1,14 @@
-[gd_scene load_steps=19 format=3 uid="uid://ce1a80lokxmpl"]
+[gd_scene load_steps=23 format=3 uid="uid://ce1a80lokxmpl"]
 
 [ext_resource type="Script" path="res://Entities/gohma.gd" id="1_hy5is"]
 [ext_resource type="Texture2D" uid="uid://b4l0g4dnfkyqv" path="res://Sprites/Gohma.png" id="1_uuk3u"]
+[ext_resource type="AudioStream" uid="uid://bv2v1xb5q42hq" path="res://Sounds/Effects/enemy-hit.mp3" id="3_fv073"]
+[ext_resource type="AudioStream" uid="uid://uein7k2m6biu" path="res://Sounds/Effects/enemy-death.mp3" id="4_ffspo"]
+[ext_resource type="AudioStream" uid="uid://cnr61ldh742th" path="res://Sounds/Effects/link-hurt.mp3" id="5_po747"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmbfm"]
+atlas = ExtResource("1_uuk3u")
+region = Rect2(0, 45, 75, 45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cm0of"]
 atlas = ExtResource("1_uuk3u")
@@ -55,6 +62,17 @@ region = Rect2(220, 90, 72, 45)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_fmbfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmbfm")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_cm0of")
 }, {
 "duration": 1.0,
@@ -106,8 +124,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mo3i4"]
-radius = 6.0
-height = 18.0
+radius = 3.0
+height = 8.00001
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ug0cd"]
 radius = 12.0
@@ -121,9 +139,10 @@ script = ExtResource("1_hy5is")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6pd5f")
-animation = &"WalkingDown"
+animation = &"Death"
 autoplay = "WalkingDown"
-frame_progress = 0.13692
+frame = 1
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
@@ -151,6 +170,16 @@ offset_right = 28.0
 offset_bottom = -18.0
 show_percentage = false
 
+[node name="Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fv073")
+
+[node name="Death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ffspo")
+
+[node name="PlayerHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_po747")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="GohmaHitbox" to="." method="_on_gohma_hitbox_body_entered"]
 [connection signal="body_exited" from="GohmaHitbox" to="." method="_on_gohma_hitbox_body_exited"]
 [connection signal="body_entered" from="GohmaTerritory" to="." method="_on_gohma_territory_body_entered"]
