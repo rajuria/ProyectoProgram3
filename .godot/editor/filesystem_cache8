@@ -1,19 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698986925
-icon.svg::CompressedTexture2D::8269338123927388465::1698697817::1698980723::1::::<><>::
-::res://Entities/::1698986925
-gohma.gd::GDScript::-1::1698986371::0::1::::<>CharacterBody2D<>::
-gohma.tscn::PackedScene::5107330825469727249::1698986525::0::1::::<><>::res://Entities/gohma.gd<>uid://b4l0g4dnfkyqv::::res://Sprites/Gohma.png
-player.gd::GDScript::-1::1698986489::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::2407078115056978892::1698986525::0::1::::<><>::res://Entities/player.gd<>uid://bqnhy8hdw6exp::::res://Sprites/Link_Walking.png
-::res://Sprites/::1698986925
-Gohma.png::CompressedTexture2D::4446135472482619669::1698984728::1698984738::1::::<><>::
-Link1.png::CompressedTexture2D::2528255423009064129::1698986921::1698986926::1::::<><>::
-Link_Walking.png::CompressedTexture2D::3536748714958594213::1698711662::1698711668::1::::<><>::
-::res://WorldScenes/::1698986630
-overworld.tscn::PackedScene::18472072008951871::1698986630::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>uid://c3iapm6tyfeg0::::res://WorldTilesets/forest_ [resources].png<>uid://bakahv7sr78hk::::res://Entities/player.tscn<>uid://8fakfct0hgx4::::res://WorldTilesets/forest_ [bridgeVertical].png<>uid://dbsykag01g4cn::::res://WorldTilesets/forest_ [bridgeHorizontal].png<>uid://ce1a80lokxmpl::::res://Entities/gohma.tscn
-::res://WorldTilesets/::1698984738
-forest_ [bridgeHorizontal].png::CompressedTexture2D::7268084770495581877::1698710443::1698710443::1::::<><>::
-forest_ [bridgeVertical].png::CompressedTexture2D::2326571853367740395::1698710434::1698710434::1::::<><>::
-forest_ [resources].png::CompressedTexture2D::6754671477256845629::1698710425::1698710425::1::::<><>::
-forest_.png::CompressedTexture2D::7831226173424330124::1698710400::1698710400::1::::<><>::
+::res://::1699222839
+cave.gd::GDScript::-1::1699220892::0::1::::<>Node2D<>::
+cave.tscn::PackedScene::2122355922201882834::1699222813::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>res://cave.gd<>uid://bakahv7sr78hk::::res://Entities/player.tscn
+icon.svg::CompressedTexture2D::8269338123927388465::1698713757::1699022485::1::::<><>::
+::res://Entities/::1699222670
+enemy.tscn::PackedScene::4535064692113219096::1699222670::0::1::::<><>::uid://dgaoftrqddcjo::::res://Sprites/EnemyWalking.png
+gohma.gd::GDScript::-1::1699022357::0::1::::<>CharacterBody2D<>::
+gohma.tscn::PackedScene::5107330825469727249::1699222670::0::1::::<><>::res://Entities/gohma.gd<>uid://b4l0g4dnfkyqv::::res://Sprites/Gohma.png
+player.gd::GDScript::-1::1699022357::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::2407078115056978892::1699222670::0::1::::<><>::res://Entities/player.gd<>uid://bcax86bfiwoo4::::res://Sprites/Link1.png
+::res://Sprites/::1699168242
+EnemyWalking.png::CompressedTexture2D::7581255104712176592::1699168226::1699168242::1::::<><>::
+Gohma.png::CompressedTexture2D::4446135472482619669::1699022357::1699022357::1::::<><>::
+Link1.png::CompressedTexture2D::2528255423009064129::1699022357::1699022357::1::::<><>::
+Link_Walking.png::CompressedTexture2D::3536748714958594213::1698713757::1698713757::1::::<><>::
+::res://WorldScenes/::1699222670
+overworld.gd::GDScript::-1::1699221006::0::1::::<>Node2D<>::
+overworld.tscn::PackedScene::18472072008951871::1699222670::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>res://WorldScenes/overworld.gd<>uid://c3iapm6tyfeg0::::res://WorldTilesets/forest_ [resources].png<>uid://bakahv7sr78hk::::res://Entities/player.tscn<>uid://8fakfct0hgx4::::res://WorldTilesets/forest_ [bridgeVertical].png<>uid://dbsykag01g4cn::::res://WorldTilesets/forest_ [bridgeHorizontal].png<>uid://ce1a80lokxmpl::::res://Entities/gohma.tscn
+::res://WorldTilesets/::1698713757
+forest_ [bridgeHorizontal].png::CompressedTexture2D::7268084770495581877::1698713757::1698713757::1::::<><>::
+forest_ [bridgeVertical].png::CompressedTexture2D::2326571853367740395::1698713757::1698713757::1::::<><>::
+forest_ [resources].png::CompressedTexture2D::6754671477256845629::1698713757::1698713757::1::::<><>::
+forest_.png::CompressedTexture2D::7831226173424330124::1698713757::1698713757::1::::<><>::

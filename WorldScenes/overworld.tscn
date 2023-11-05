@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://i7h5tngdyd8"]
+[gd_scene load_steps=14 format=3 uid="uid://i7h5tngdyd8"]
 
 [ext_resource type="Texture2D" uid="uid://djtrfep0uyt4g" path="res://WorldTilesets/forest_.png" id="1_twtr3"]
+[ext_resource type="Script" path="res://WorldScenes/overworld.gd" id="1_yr32y"]
 [ext_resource type="Texture2D" uid="uid://c3iapm6tyfeg0" path="res://WorldTilesets/forest_ [resources].png" id="2_wo1kl"]
 [ext_resource type="PackedScene" uid="uid://bakahv7sr78hk" path="res://Entities/player.tscn" id="3_8cu1b"]
 [ext_resource type="Texture2D" uid="uid://8fakfct0hgx4" path="res://WorldTilesets/forest_ [bridgeVertical].png" id="3_ntd64"]
@@ -643,10 +644,14 @@ sources/1 = SubResource("TileSetAtlasSource_aoapk")
 sources/2 = SubResource("TileSetAtlasSource_g8nm8")
 sources/3 = SubResource("TileSetAtlasSource_ydb3b")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88x04"]
+size = Vector2(24, 23.3333)
+
 [node name="Overworld" type="Node2D"]
 z_index = 1
 y_sort_enabled = true
 scale = Vector2(1.5, 1.5)
+script = ExtResource("1_yr32y")
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = 1
@@ -693,3 +698,11 @@ scale = Vector2(0.5, 0.5)
 [node name="Gohma3" parent="TileMap" instance=ExtResource("6_xkeqj")]
 position = Vector2(182, 160)
 scale = Vector2(0.5, 0.5)
+
+[node name="cave" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cave"]
+position = Vector2(280, 45)
+shape = SubResource("RectangleShape2D_88x04")
+
+[connection signal="body_entered" from="cave" to="." method="_on_cave_body_entered"]

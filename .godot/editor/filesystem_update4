@@ -1,5 +1,5 @@
 res://WorldScenes/overworld.tscn
-res://Entities/player.tscn
 res://Entities/gohma.tscn
-res://Entities/gohma.gd
-res://Entities/player.gd
+res://Entities/player.tscn
+res://Entities/enemy.tscn
+res://cave.tscn
