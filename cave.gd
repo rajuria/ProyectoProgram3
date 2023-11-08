@@ -21,5 +21,5 @@ func change_scenes():
 
 func _on_overworld_body_entered(body):
 	if body.is_in_group("Player"):
-		change_scene == true
+		change_scene = true
 		change_scenes()

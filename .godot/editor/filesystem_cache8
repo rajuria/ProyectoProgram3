@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699227473
+::res://::1699481359
 cave.gd::GDScript::-1::1699220892::0::1::::<>Node2D<>::
-cave.tscn::PackedScene::2122355922201882834::1699226357::0::1::::<><>::uid://djtrfep0uyt4g
+cave.tscn::PackedScene::2122355922201882834::1699395688::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>res://cave.gd<>uid://bakahv7sr78hk::::res://Entities/player.tscn
 developer_options.gd::GDScript::-1::1699226395::0::1::::<>CanvasLayer<>::
 developer_options.tscn::PackedScene::4880199437570236388::1699226395::0::1::::<><>::res://developer_options.gd<>uid://be781skxk3xse
 icon.svg::CompressedTexture2D::8269338123927388465::1698713757::1699022485::1::::<><>::
 start_screen.gd::GDScript::-1::1699226395::0::1::::<>CanvasLayer<>::
-start_screen.tscn::PackedScene::6159561544217563059::1699227009::0::1::::<><>::res://start_screen.gd<>uid://b2w3rj0mlqgi5::::res://Images/zelda-background-rkp03okh2d43ik06.jpg<>uid://ljb00jknxsc6::::res://Images/Zelda_Logo.svg.png<>uid://qm8yjmrj4rjk::::res://Sounds/Soundtrack/TitleTheme.mp3
+start_screen.tscn::PackedScene::6159561544217563059::1699395688::0::1::::<><>::res://start_screen.gd<>uid://b2w3rj0mlqgi5::::res://Images/zelda-background-rkp03okh2d43ik06.jpg<>uid://ljb00jknxsc6::::res://Images/Zelda_Logo.svg.png<>uid://qm8yjmrj4rjk::::res://Sounds/Soundtrack/TitleTheme.mp3
 ::res://Entities/::1699226395
 enemy.tscn::PackedScene::4535064692113219096::1699226318::0::1::::<><>::uid://dgaoftrqddcjo
 gohma.gd::GDScript::-1::1699226395::0::1::::<>CharacterBody2D<>::
@@ -34,9 +34,9 @@ Gohma.png::CompressedTexture2D::4446135472482619669::1699022357::1699022357::1::
 Link1.png::CompressedTexture2D::2528255423009064129::1699022357::1699022357::1::::<><>::
 Link_Misc.png::CompressedTexture2D::8511044331513929445::1699226395::1699226395::1::::<><>::
 Link_Walking.png::CompressedTexture2D::3536748714958594213::1698713757::1698713757::1::::<><>::
-::res://WorldScenes/::1699226395
+::res://WorldScenes/::1699228140
 overworld.gd::GDScript::-1::1699221006::0::1::::<>Node2D<>::
-overworld.tscn::PackedScene::-1::1699226395::0::1::::<><>::
+overworld.tscn::PackedScene::18472072008951871::1699228140::0::1::::<><>::uid://djtrfep0uyt4g
 ::res://WorldTilesets/::1698713757
 forest_ [bridgeHorizontal].png::CompressedTexture2D::7268084770495581877::1698713757::1698713757::1::::<><>::
 forest_ [bridgeVertical].png::CompressedTexture2D::2326571853367740395::1698713757::1698713757::1::::<><>::

@@ -47,5 +47,5 @@ text = "Ver Alpha 0.1104"
 tab_size = 5
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="DeveloperOptions" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="DeveloperOptions" to="." method="_on_developer_options_pressed"]
+[connection signal="pressed" from="DeveloperOptions" to="." method="_on_start_pressed"]
