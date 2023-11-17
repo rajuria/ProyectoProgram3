@@ -1,0 +1,10 @@
+~ start
+
+OldMan: Hello
+- Goodbye.
+- Hello.
+	OldMan: Nice to Meet you
+	=> END
+OldMan: Bye
+
+=> END

@@ -15,6 +15,18 @@ run/main_scene="res://start_screen.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://CaveDialogue.dialogue")
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
