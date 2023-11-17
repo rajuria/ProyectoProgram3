@@ -30,13 +30,6 @@ stream = ExtResource("4_1dnv4")
 volume_db = 5.0
 autoplay = true
 
-[node name="DeveloperOptions" type="Button" parent="."]
-offset_left = 13.0
-offset_top = 553.0
-offset_right = 166.0
-offset_bottom = 584.0
-text = "Developer Options"
-
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
 offset_left = 499.0
@@ -47,5 +40,3 @@ text = "Ver Alpha 0.1104"
 tab_size = 5
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="DeveloperOptions" to="." method="_on_developer_options_pressed"]
-[connection signal="pressed" from="DeveloperOptions" to="." method="_on_start_pressed"]

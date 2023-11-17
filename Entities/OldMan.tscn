@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://ibs0hr1x5c0c"]
+
+[ext_resource type="Texture2D" uid="uid://cx28n24pap84w" path="res://Sprites/OldManWalkingIdle.png" id="1_pmq1k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4hri"]
+atlas = ExtResource("1_pmq1k")
+region = Rect2(4, 4, 33, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwii7"]
+atlas = ExtResource("1_pmq1k")
+region = Rect2(41, 4, 33, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md8bu"]
+atlas = ExtResource("1_pmq1k")
+region = Rect2(78, 4, 33, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7h68o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4hri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwii7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md8bu")
+}],
+"loop": true,
+"name": &"IdleDown",
+"speed": 2.0
+}]
+
+[node name="OldMan" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7h68o")
+animation = &"IdleDown"
+autoplay = "IdleDown"
+frame_progress = 0.435272
