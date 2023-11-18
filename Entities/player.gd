@@ -10,7 +10,6 @@ var Attacking=false
 var AttackTimer=0.0
 var AttackDuration=0.2
 var KnockBack = 1
-var HasSword=false;
 
 func _ready():
 	AnimatedSprite = $AnimatedSprite2D
@@ -63,7 +62,7 @@ func UpdateAnimation():
 	AnimatedSprite.flip_h = LastDirection.x >0
 
 func _input(event):
-	if event.is_action_pressed("ui_select") and HasSword:
+	if event.is_action_pressed("ui_select") and Global.LinkHasSword:
 		Attacking=true
 		AttackTimer=0.0
 		$AttackSound.play()

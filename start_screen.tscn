@@ -30,13 +30,4 @@ stream = ExtResource("4_1dnv4")
 volume_db = 5.0
 autoplay = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-modulate = Color(0, 0, 0, 1)
-offset_left = 499.0
-offset_top = 230.0
-offset_right = 791.0
-offset_bottom = 270.0
-text = "Ver Alpha 0.1104"
-tab_size = 5
-
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

@@ -1,8 +1,10 @@
 res://start_screen.tscn
-res://Entities/player.gd
-res://cave.tscn
-<<<<<<< Updated upstream
-=======
-res://WorldScenes/overworld.tscn
+res://WorldScenes/overworld.gd
 res://Entities/OldMan.tscn
->>>>>>> Stashed changes
+res://Entities/player.tscn
+res://WorldScenes/cave.tscn
+res://Entities/sword.tscn
+res://Entities/sword.gd
+res://WorldScenes/cave.gd
+res://global.gd
+res://Entities/player.gd

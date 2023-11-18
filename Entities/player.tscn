@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://bakahv7sr78hk"]
+[gd_scene load_steps=53 format=3 uid="uid://bakahv7sr78hk"]
 
 [ext_resource type="Script" path="res://Entities/player.gd" id="1_6rvay"]
 [ext_resource type="Texture2D" uid="uid://bcax86bfiwoo4" path="res://Sprites/Link1.png" id="2_xktpg"]
@@ -74,6 +74,10 @@ region = Rect2(58, 0, 29, 30)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tohpe"]
 atlas = ExtResource("3_yisfn")
 region = Rect2(87, 209, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fl88p"]
+atlas = ExtResource("3_yisfn")
+region = Rect2(294, 217, 29, 43)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mcnim"]
 atlas = ExtResource("2_xktpg")
@@ -277,6 +281,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_fl88p")
+}],
+"loop": true,
+"name": &"GotSword",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_mcnim")
 }],
 "loop": true,
@@ -397,10 +409,8 @@ script = ExtResource("1_6rvay")
 position = Vector2(1, 1)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_dbick")
-animation = &"Death"
+animation = &"GotSword"
 autoplay = "IdleDown"
-frame = 3
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)

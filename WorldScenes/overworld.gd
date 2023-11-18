@@ -16,4 +16,4 @@ func _on_cave_body_entered(body):
 func change_scenes():
 	if change_scene == true:
 		if current_scene == "overworld":
-			get_tree().change_scene_to_file("res://cave.tscn")
+			get_tree().change_scene_to_file("res://WorldScenes/cave.tscn")
