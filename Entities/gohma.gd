@@ -38,7 +38,7 @@ func _physics_process(delta):
 		DamageFromPlayerTimer=0.0
 	UpdateHealth()
 	Die()
-	if Attacking:
+	if Attacking and not Global.LinkIsDead:
 		var DirectionToPlayer=(Player.position-position).normalized()
 		velocity = DirectionToPlayer*AttackSpeed
 		UpdateAnimation(DirectionToPlayer)

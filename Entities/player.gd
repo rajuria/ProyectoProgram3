@@ -5,7 +5,6 @@ var LastDirection = Vector2.ZERO
 var AnimatedSprite
 var EnemyInRange=false
 var Health = 150
-var Dead=false
 var Attacking=false
 var AttackTimer=0.0
 var AttackDuration=0.2
@@ -28,7 +27,10 @@ func _physics_process(delta):
 		AttackTimer=0.0
 	
 func UpdateAnimation():
-	if Dead:
+	if Global.LinkIsDead:
+		velocity=Vector2.ZERO
+		return
+	if Global.PlaySwordAnimation:
 		velocity=Vector2.ZERO
 		return
 	
@@ -67,7 +69,7 @@ func _input(event):
 		AttackTimer=0.0
 		$AttackSound.play()
 	if event.is_action_pressed("ui_cancel"):
-		Health=-100
+		Health=0
 	
 func UpdateHealth():
 	var HealthBar = $HealthBar
@@ -78,10 +80,12 @@ func UpdateHealth():
 		HealthBar.visible = true
 
 func Die():
-	if Health<=0 and not Dead:
-		Dead=true
+	if Health<=0 and not Global.LinkIsDead:
+		Global.LinkIsDead=true
+		Global.LastOverworldPosition= position
 		AnimatedSprite.play("Death")
 		$Death.play()
+
 
 func _on_hitbox_body_entered(body):
 	if body.is_in_group("Enemy"):
@@ -95,5 +99,5 @@ func _on_hitbox_body_exited(body):
 
 
 func _on_animated_sprite_2d_animation_finished():
-	if AnimatedSprite.animation =="Death":
-		queue_free()
+	if AnimatedSprite.animation=="Death":
+		get_tree().change_scene_to_file("res://game_over.tscn")

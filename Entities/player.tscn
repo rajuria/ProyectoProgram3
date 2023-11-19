@@ -59,6 +59,10 @@ region = Rect2(56, 175, 28, 34)
 atlas = ExtResource("2_xktpg")
 region = Rect2(84, 175, 28, 34)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tohpe"]
+atlas = ExtResource("3_yisfn")
+region = Rect2(87, 209, 29, 29)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_pulb6"]
 atlas = ExtResource("2_xktpg")
 region = Rect2(58, 30, 29, 30)
@@ -70,10 +74,6 @@ region = Rect2(326, 30, 29, 30)
 [sub_resource type="AtlasTexture" id="AtlasTexture_vp02r"]
 atlas = ExtResource("2_xktpg")
 region = Rect2(58, 0, 29, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tohpe"]
-atlas = ExtResource("3_yisfn")
-region = Rect2(87, 209, 29, 29)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fl88p"]
 atlas = ExtResource("3_yisfn")
@@ -234,6 +234,14 @@ animations = [{
 "loop": false,
 "name": &"AttackUp",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tohpe")
+}],
+"loop": true,
+"name": &"DeadLink",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -409,7 +417,7 @@ script = ExtResource("1_6rvay")
 position = Vector2(1, 1)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_dbick")
-animation = &"GotSword"
+animation = &"DeadLink"
 autoplay = "IdleDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

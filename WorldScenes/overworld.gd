@@ -4,12 +4,14 @@ var change_scene = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if Global.LastOverworldPosition!=Vector2(0,0):
+		$TileMap/Player.position = Global.LastOverworldPosition+Vector2(0,5)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_cave_body_entered(body):
 	if body.is_in_group("Player"):
+		Global.LastOverworldPosition = $TileMap/Player.position
 		change_scene = true
 		change_scenes()
 

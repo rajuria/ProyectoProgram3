@@ -1,10 +1,8 @@
 ~ start
 
-OldMan: Hello
-- Goodbye.
-- Hello.
-	OldMan: Nice to Meet you
-	=> END
-OldMan: Bye
+Old Man: Link, you have arrived.
+Old Man: Ganon is once again using his power to create monsters.
+Old Man: Take this sword and go to the desert. The Sage of Lightning will grant you her power. With it you can defeat Ganon!
+Old Man: You must hurry! Before it is too late.
 
 => END
