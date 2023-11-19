@@ -1,0 +1,159 @@
+[gd_scene load_steps=23 format=3 uid="uid://blub56e27wdqn"]
+
+[ext_resource type="Script" path="res://Entities/PhantomGanon.gd" id="1_pm8cn"]
+[ext_resource type="Texture2D" uid="uid://ctbceqdmqhiyo" path="res://Sprites/Phantom Ganon.png" id="2_re284"]
+[ext_resource type="AudioStream" uid="uid://dla4phqbw448f" path="res://Sounds/Effects/PhantomGanonHa.mp3" id="3_1adwv"]
+[ext_resource type="AudioStream" uid="uid://dq7yst0vt3n3d" path="res://Sounds/Effects/PhantomGanonHit.mp3" id="4_vvw2n"]
+[ext_resource type="AudioStream" uid="uid://df05xo0li21t4" path="res://Sounds/Effects/PhantomGanonHurt.mp3" id="5_ncoog"]
+[ext_resource type="AudioStream" uid="uid://bny10sgiyx3ir" path="res://Sounds/Effects/PhantomGanonDie.mp3" id="6_jokmj"]
+[ext_resource type="AudioStream" uid="uid://cnr61ldh742th" path="res://Sounds/Effects/link-hurt.mp3" id="7_dcb7q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppgw3"]
+atlas = ExtResource("2_re284")
+region = Rect2(189, 182, 78, 106)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74ove"]
+atlas = ExtResource("2_re284")
+region = Rect2(267, 182, 78, 106)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec7g0"]
+atlas = ExtResource("2_re284")
+region = Rect2(359, 182, 134, 106)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xso4q"]
+atlas = ExtResource("2_re284")
+region = Rect2(470, 182, 127, 106)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrehp"]
+atlas = ExtResource("2_re284")
+region = Rect2(597, 182, 127, 106)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12cpq"]
+atlas = ExtResource("2_re284")
+region = Rect2(71, 7, 72, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jkas"]
+atlas = ExtResource("2_re284")
+region = Rect2(152, 7, 77, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt7r1"]
+atlas = ExtResource("2_re284")
+region = Rect2(241, 7, 77, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1xuc"]
+atlas = ExtResource("2_re284")
+region = Rect2(326, 7, 77, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqlcy"]
+atlas = ExtResource("2_re284")
+region = Rect2(484, 7, 77, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o66bm"]
+atlas = ExtResource("2_re284")
+region = Rect2(559, 7, 77, 127)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es3p1"]
+atlas = ExtResource("2_re284")
+region = Rect2(637, 7, 77, 127)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f5hkr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppgw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74ove")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ec7g0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xso4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrehp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ec7g0")
+}],
+"loop": false,
+"name": &"Attacking",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12cpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jkas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kt7r1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1xuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqlcy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o66bm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es3p1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5emjh"]
+radius = 24.0
+height = 124.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s5dtn"]
+radius = 16.0
+height = 76.0
+
+[node name="PhantomGanon" type="CharacterBody2D"]
+script = ExtResource("1_pm8cn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f5hkr")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5emjh")
+
+[node name="PhamtomGanonHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhamtomGanonHitbox"]
+position = Vector2(3, 4)
+shape = SubResource("CapsuleShape2D_s5dtn")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0.721569, 0, 0, 1)
+offset_left = -28.0
+offset_top = -69.0
+offset_right = 40.0
+offset_bottom = -61.0
+show_percentage = false
+
+[node name="HA" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1adwv")
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vvw2n")
+
+[node name="Hurt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ncoog")
+
+[node name="Die" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_jokmj")
+
+[node name="PlayerHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_dcb7q")

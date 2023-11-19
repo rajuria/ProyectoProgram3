@@ -1,11 +1,11 @@
+Camera2D
+AudioStreamPlayer2D
+ProgressBar
 CollisionShape2D
 Area2D
-AudioStreamPlayer2D
-Camera2D
 TileMap
+AnimatedSprite2D
+CharacterBody2D
 Button
 Label
 CanvasLayer
-AnimatedSprite2D
-CharacterBody2D
-ProgressBar
