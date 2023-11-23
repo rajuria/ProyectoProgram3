@@ -1,127 +1,130 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1700416078
-game_over.gd::GDScript::-1::1700372019::0::1::::<>CanvasLayer<>::
-game_over.tscn::PackedScene::302608030227263226::1700372019::0::1::::<><>::res://game_over.gd<>uid://cdh6vqvcib3be
-global.gd::GDScript::-1::1700371578::0::1::::<>Node<>::
-icon.svg::CompressedTexture2D::8269338123927388465::1698697817::1699578542::1::::<><>::
-start_screen.gd::GDScript::-1::1699153787::0::1::::<>CanvasLayer<>::
-start_screen.tscn::PackedScene::6159561544217563059::1700409510::0::1::::<><>::res://start_screen.gd<>uid://b2w3rj0mlqgi5::::res://Images/zelda-background-rkp03okh2d43ik06.jpg<>uid://ljb00jknxsc6::::res://Images/Zelda_Logo.svg.png<>uid://qm8yjmrj4rjk::::res://Sounds/Soundtrack/TitleTheme.mp3
-::res://addons/::1700188912
-::res://addons/dialogue_manager/::1700188912
-constants.gd::GDScript::-1::1700188912::0::1::::<>Node<>::
-dialogue_label.gd::GDScript::-1::1700188912::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg::
-dialogue_label.tscn::PackedScene::5518490004210093266::1700188912::0::1::::<><>::res://addons/dialogue_manager/dialogue_label.gd
-dialogue_line.gd::GDScript::-1::1700188912::0::1::::DialogueLine<>RefCounted<>::
-dialogue_manager.gd::GDScript::-1::1700188912::0::1::::<>Node<>::
-dialogue_reponses_menu.gd::GDScript::-1::1700188912::0::1::::DialogueResponsesMenu<>VBoxContainer<>res://addons/dialogue_manager/assets/responses_menu.svg::
-dialogue_resource.gd::GDScript::-1::1700188912::0::1::::DialogueResource<>Resource<>res://addons/dialogue_manager/assets/icon.svg::
-dialogue_response.gd::GDScript::-1::1700188912::0::1::::DialogueResponse<>RefCounted<>::
-editor_translation_parser_plugin.gd::GDScript::-1::1700188912::0::1::::<>EditorTranslationParserPlugin<>::
-import_plugin.gd::GDScript::-1::1700188912::0::1::::<>EditorImportPlugin<>::
-plugin.cfg::TextFile::-1::1700188912::0::1::::<><>::
-plugin.gd::GDScript::-1::1700188912::0::1::::<>EditorPlugin<>::
-test_scene.gd::GDScript::-1::1700188912::0::1::::BaseDialogueTestScene<>Node2D<>::
-test_scene.tscn::PackedScene::-1::1700188912::0::1::::<><>::res://addons/dialogue_manager/test_scene.gd
-::res://addons/dialogue_manager/assets/::1700188912
-icon.svg::CompressedTexture2D::9148339284877624195::1700188912::1700188912::1::::<><>::
-responses_menu.svg::CompressedTexture2D::8371359403825774630::1700188912::1700188912::1::::<><>::
-update.svg::CompressedTexture2D::9126631778427806641::1700188912::1700188912::1::::<><>::
-::res://addons/dialogue_manager/components/::1700188912
-code_edit.gd::GDScript::-1::1700188912::0::1::::<>CodeEdit<>::
-code_edit.tscn::PackedScene::5379618807048408118::1700188912::0::1::::<><>::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>res://addons/dialogue_manager/components/code_edit.gd
-code_edit_syntax_highlighter.gd::GDScript::-1::1700188912::0::1::::<>SyntaxHighlighter<>::
-dialogue_cache.gd::GDScript::-1::1700188912::0::1::::<>Node<>::
-download_update_panel.gd::GDScript::-1::1700188912::0::1::::<>Control<>::
-download_update_panel.tscn::PackedScene::1130642722554629364::1700188912::0::1::::<><>::res://addons/dialogue_manager/components/download_update_panel.gd<>uid://d3baj6rygkb3f
-errors_panel.gd::GDScript::-1::1700188912::0::1::::<>HBoxContainer<>::
-errors_panel.tscn::PackedScene::6105315990352960875::1700188912::0::1::::<><>::res://addons/dialogue_manager/components/errors_panel.gd
-files_list.gd::GDScript::-1::1700188912::0::1::::<>VBoxContainer<>::
-files_list.tscn::PackedScene::8113335055803740416::1700188912::0::1::::<><>::res://addons/dialogue_manager/components/files_list.gd<>uid://d3lr2uas6ax8v
-parser.gd::GDScript::-1::1700188912::0::1::::DialogueManagerParser<>Object<>::
-parse_result.gd::GDScript::-1::1700188912::0::1::::DialogueManagerParseResult<>RefCounted<>::
-resolved_line_data.gd::GDScript::-1::1700188912::0::1::::<>RefCounted<>::
-resolved_tag_data.gd::GDScript::-1::1700188912::0::1::::<>RefCounted<>::
-search_and_replace.gd::GDScript::-1::1700188912::0::1::::<>VBoxContainer<>::
-search_and_replace.tscn::PackedScene::458254375860855630::1700188912::0::1::::<><>::res://addons/dialogue_manager/components/search_and_replace.gd
-settings.gd::GDScript::-1::1700188912::0::1::::<>Node<>::
-title_list.gd::GDScript::-1::1700188912::0::1::::<>VBoxContainer<>::
-title_list.tscn::PackedScene::6134415340044566558::1700188912::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
-update_button.gd::GDScript::-1::1700188912::0::1::::<>Button<>::
-update_button.tscn::PackedScene::5825087957514786930::1700188912::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk
-::res://addons/dialogue_manager/example_balloon/::1700188912
-example_balloon.gd::GDScript::-1::1700188912::0::1::::<>CanvasLayer<>::
-example_balloon.tscn::PackedScene::2304415056852043862::1700188912::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
-small_example_balloon.tscn::PackedScene::1883859960814163368::1700188912::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
-::res://addons/dialogue_manager/l10n/::1700188912
-en.mo::Translation::-1::1700188912::0::1::::<><>::
-en.po::Translation::-1::1700188912::0::1::::<><>::
-zh.po::Translation::-1::1700188912::0::1::::<><>::
-zh_TW.po::Translation::-1::1700188912::0::1::::<><>::
-::res://addons/dialogue_manager/views/::1700188912
-main_view.gd::GDScript::-1::1700188912::0::1::::<>Control<>::
-main_view.tscn::PackedScene::4884668666408697448::1700188912::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u
-settings_view.gd::GDScript::-1::1700188912::0::1::::<>TabContainer<>::
-settings_view.tscn::PackedScene::5839841081119266502::1700188912::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://Dialogues/::1700371278
-CaveDialogue.dialogue::Resource::8156612592247645053::1700371278::1700371278::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-::res://Entities/::1700415103
-gohma.gd::GDScript::-1::1700370583::0::1::::<>CharacterBody2D<>::
-gohma.tscn::PackedScene::5107330825469727249::1700369407::0::1::::<><>::res://Entities/gohma.gd<>uid://b4l0g4dnfkyqv
-OldMan.tscn::PackedScene::564713072714102716::1700409510::0::1::::<><>::uid://cx28n24pap84w::::res://Sprites/OldManWalkingIdle.png
-PhantomGanon.gd::GDScript::-1::1700415100::0::1::::<>CharacterBody2D<>::
-phantom_ganon.tscn::PackedScene::3199901445276026185::1700415103::0::1::::<><>::res://Entities/PhantomGanon.gd<>uid://ctbceqdmqhiyo::::res://Sprites/Phantom Ganon.png
-player.gd::GDScript::-1::1700371888::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::2407078115056978892::1700415103::0::1::::<><>::res://Entities/player.gd<>uid://bcax86bfiwoo4::::res://Sprites/Link1.png<>uid://dsbmg4xp70iit::::res://Sounds/Effects/fighter-sword.mp3<>uid://dti2wldnuhc5j::::res://Sprites/Link_Misc.png<>uid://c1viup2g7ynp6::::res://Sounds/Effects/link-death.mp3<>uid://cnr61ldh742th::::res://Sounds/Effects/link-hurt.mp3
-sword.gd::GDScript::-1::1700370165::0::1::::<>Area2D<>::
-sword.tscn::PackedScene::1355988042917814137::1700409510::0::1::::<><>::uid://bii2w1c2m1o3u::::res://Sprites/Sword.png<>res://Entities/sword.gd<>uid://bi8fmf470t3fb::::res://Sounds/Effects/BigItemAcquired.mp3
-::res://Images/::1700372273
-The-Legend-of-Zelda-Tears-of-the-Kingdom-Screenshot-019.jpg::CompressedTexture2D::458047995490805747::1699153690::1699153724::1::::<><>::
-zelda-background-rkp03okh2d43ik06.jpg::CompressedTexture2D::4328666718693957302::1699150012::1699150019::1::::<><>::
-Zelda_Logo.svg.png::CompressedTexture2D::790763369104927923::1699149894::1699149894::1::::<><>::
-::res://Sounds/::1700351048
-::res://Sounds/Effects/::1700416091
-BigItemAcquired.mp3::AudioStreamMP3::3016381222076223875::1700351040::1700351048::1::::<><>::
-enemy-death.mp3::AudioStreamMP3::1412545032479043264::1699147884::1699147884::1::::<><>::
-enemy-hit.mp3::AudioStreamMP3::3917447297908491218::1699147880::1699147880::1::::<><>::
-fighter-sword.mp3::AudioStreamMP3::8425466492427514795::1699147382::1699147383::1::::<><>::
-GameOver.mp3::AudioStreamMP3::4999779143942609182::1700367500::1700367500::1::::<><>::
-link-death.mp3::AudioStreamMP3::6641625516506834577::1699147623::1699147623::1::::<><>::
-link-hurt.mp3::AudioStreamMP3::5722319996670174209::1699147875::1699147876::1::::<><>::
-PhantomGanonDie.mp3::AudioStreamMP3::3350044958830128329::1700416090::1700416091::1::::<><>::
-PhantomGanonHa.mp3::AudioStreamMP3::7933127303252791235::1700416090::1700416091::1::::<><>::
-PhantomGanonHit.mp3::AudioStreamMP3::8349834027078831327::1700416091::1700416091::1::::<><>::
-PhantomGanonHurt.mp3::AudioStreamMP3::7563679070622350723::1700416091::1700416091::1::::<><>::
-::res://Sounds/Soundtrack/::1700416078
-BossBattle.mp3::AudioStreamMP3::4889694977470054152::1700415847::1700416078::1::::<><>::
-Fairy Fountain.mp3::AudioStreamMP3::2735287199705816612::1699153274::1699153587::1::::<><>::
-FinalBoss.mp3::AudioStreamMP3::3742068202990006301::1700415855::1700416072::1::::<><>::
-Inside Cave.mp3::AudioStreamMP3::5172138069325542304::1700348353::1700348415::1::::<><>::
-TheGorons.mp3::AudioStreamMP3::2166343953759232834::1700373060::1700373093::1::::<><>::
-TitleTheme.mp3::AudioStreamMP3::1149841043105639576::1699150780::1699153601::1::::<><>::
-Uncharted Territory.mp3::AudioStreamMP3::564196197785167653::1699151737::1699153616::1::::<><>::
-::res://Sprites/::1700412674
-Eyegore.png::CompressedTexture2D::2218895918585583021::1700412655::1700412655::1::::<><>::
-Gohma.png::CompressedTexture2D::4446135472482619669::1698984728::1698984738::1::::<><>::
-Link1.png::CompressedTexture2D::2528255423009064129::1698986921::1698986926::1::::<><>::
-Link_Misc.png::CompressedTexture2D::8511044331513929445::1699154337::1699154345::1::::<><>::
-Maidens.png::CompressedTexture2D::4022561789695559023::1700412674::1700412674::1::::<><>::
-OldManWalkingIdle.png::CompressedTexture2D::6444951310114559884::1700188927::1700188927::1::::<><>::
-Phantom Ganon.png::CompressedTexture2D::6108623196998936918::1700412661::1700412661::1::::<><>::
-Stalfos.png::CompressedTexture2D::3985602225550290549::1700412666::1700412666::1::::<><>::
-Sword.png::CompressedTexture2D::2966126471040984692::1700349464::1700349497::1::::<><>::
-::res://WorldScenes/::1700415104
-cave.gd::GDScript::-1::1700371302::0::1::::<>Node2D<>::
-cave.tscn::PackedScene::2122355922201882834::1700409510::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>res://WorldScenes/cave.gd<>uid://cfxomgikupgps::::res://Sounds/Soundtrack/Inside Cave.mp3<>uid://bakahv7sr78hk::::res://Entities/player.tscn<>uid://ibs0hr1x5c0c::::res://Entities/OldMan.tscn<>uid://tk36pioa8g2d::::res://Entities/sword.tscn
-desert_temple_boss_room.tscn::PackedScene::1598183610919949926::1700415104::0::1::::<><>::uid://b5fj7xi8m8rkm::::res://WorldTilesets/desert_.png<>uid://blub56e27wdqn::::res://Entities/phantom_ganon.tscn<>uid://bakahv7sr78hk::::res://Entities/player.tscn
-overworld.gd::GDScript::-1::1700374688::0::1::::<>Node2D<>::
-overworld.tscn::PackedScene::18472072008951871::1700415103::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>res://WorldScenes/overworld.gd<>uid://c3iapm6tyfeg0::::res://WorldTilesets/forest_ [resources].png<>uid://bakahv7sr78hk::::res://Entities/player.tscn<>uid://8fakfct0hgx4::::res://WorldTilesets/forest_ [bridgeVertical].png<>uid://b7aqi7tlcvlfj::::res://WorldTilesets/desert_ [fencesAndWalls].png<>uid://dbsykag01g4cn::::res://WorldTilesets/forest_ [bridgeHorizontal].png<>uid://dd5837fewjxn6::::res://WorldTilesets/desert_ [resources].png<>uid://ctiw7cfmwltvb::::res://WorldTilesets/desert_ [bridgeVertical].png<>uid://ce1a80lokxmpl::::res://Entities/gohma.tscn<>uid://b5fj7xi8m8rkm::::res://WorldTilesets/desert_.png<>uid://drbrp1xtsw351::::res://WorldTilesets/DesertTemple.png<>uid://ibkh1wsxmdpl::::res://Sounds/Soundtrack/Uncharted Territory.mp3<>uid://54nmr5bxlomk::::res://Sounds/Soundtrack/TheGorons.mp3
-::res://WorldTilesets/::1700374915
-DesertTemple.png::CompressedTexture2D::8355597148491347318::1700374915::1700374915::1::::<><>::
-desert_ [bridgeVertical].png::CompressedTexture2D::6124337451132916367::1700372255::1700372273::1::::<><>::
-desert_ [fencesAndWalls].png::CompressedTexture2D::4633451148947429063::1700372306::1700372306::1::::<><>::
-desert_ [resources].png::CompressedTexture2D::7433815266288572573::1700372287::1700372287::1::::<><>::
-desert_.png::CompressedTexture2D::4503012701856437004::1700372292::1700372292::1::::<><>::
-forest_ [bridgeHorizontal].png::CompressedTexture2D::7268084770495581877::1698710443::1698710443::1::::<><>::
-forest_ [bridgeVertical].png::CompressedTexture2D::2326571853367740395::1698710434::1698710434::1::::<><>::
-forest_ [resources].png::CompressedTexture2D::6754671477256845629::1698710425::1698710425::1::::<><>::
-forest_.png::CompressedTexture2D::7831226173424330124::1698710400::1698710400::1::::<><>::
+::res://::1700770976
+game_over.gd::GDScript::-1::1700761732::0::1::::<>CanvasLayer<>::
+game_over.tscn::PackedScene::302608030227263226::1700761732::0::1::::<><>::res://game_over.gd<>uid://cdh6vqvcib3be
+global.gd::GDScript::-1::1700761732::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::8269338123927388465::1700761732::1700761768::1::::<><>::
+overworld.tscn::PackedScene::18472072008951871::1700727198::0::1::::<><>::res://Entities/hyrule.gd<>uid://djtrfep0uyt4g
+start_screen.gd::GDScript::-1::1700761732::0::1::::<>CanvasLayer<>::
+start_screen.tscn::PackedScene::6159561544217563059::1700761732::0::1::::<><>::res://start_screen.gd<>uid://b2w3rj0mlqgi5
+::res://addons/::1700761732
+::res://addons/dialogue_manager/::1700761732
+constants.gd::GDScript::-1::1700761732::0::1::::<>Node<>::
+dialogue_label.gd::GDScript::-1::1700761732::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg::
+dialogue_label.tscn::PackedScene::5518490004210093266::1700761732::0::1::::<><>::res://addons/dialogue_manager/dialogue_label.gd
+dialogue_line.gd::GDScript::-1::1700761732::0::1::::DialogueLine<>RefCounted<>::
+dialogue_manager.gd::GDScript::-1::1700761732::0::1::::<>Node<>::
+dialogue_reponses_menu.gd::GDScript::-1::1700761732::0::1::::DialogueResponsesMenu<>VBoxContainer<>res://addons/dialogue_manager/assets/responses_menu.svg::
+dialogue_resource.gd::GDScript::-1::1700761732::0::1::::DialogueResource<>Resource<>res://addons/dialogue_manager/assets/icon.svg::
+dialogue_response.gd::GDScript::-1::1700761732::0::1::::DialogueResponse<>RefCounted<>::
+editor_translation_parser_plugin.gd::GDScript::-1::1700761732::0::1::::<>EditorTranslationParserPlugin<>::
+import_plugin.gd::GDScript::-1::1700761732::0::1::::<>EditorImportPlugin<>::
+plugin.cfg::TextFile::-1::1700761732::0::1::::<><>::
+plugin.gd::GDScript::-1::1700761732::0::1::::<>EditorPlugin<>::
+test_scene.gd::GDScript::-1::1700761732::0::1::::BaseDialogueTestScene<>Node2D<>::
+test_scene.tscn::PackedScene::-1::1700761732::0::1::::<><>::res://addons/dialogue_manager/test_scene.gd
+::res://addons/dialogue_manager/assets/::1700761768
+icon.svg::CompressedTexture2D::9148339284877624195::1700761732::1700761768::1::::<><>::
+responses_menu.svg::CompressedTexture2D::8371359403825774630::1700761732::1700761768::1::::<><>::
+update.svg::CompressedTexture2D::9126631778427806641::1700761732::1700761768::1::::<><>::
+::res://addons/dialogue_manager/components/::1700761732
+code_edit.gd::GDScript::-1::1700761732::0::1::::<>CodeEdit<>::
+code_edit.tscn::PackedScene::5379618807048408118::1700761732::0::1::::<><>::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>res://addons/dialogue_manager/components/code_edit.gd
+code_edit_syntax_highlighter.gd::GDScript::-1::1700761732::0::1::::<>SyntaxHighlighter<>::
+dialogue_cache.gd::GDScript::-1::1700761732::0::1::::<>Node<>::
+download_update_panel.gd::GDScript::-1::1700761732::0::1::::<>Control<>::
+download_update_panel.tscn::PackedScene::1130642722554629364::1700761732::0::1::::<><>::res://addons/dialogue_manager/components/download_update_panel.gd<>uid://d3baj6rygkb3f
+errors_panel.gd::GDScript::-1::1700761732::0::1::::<>HBoxContainer<>::
+errors_panel.tscn::PackedScene::6105315990352960875::1700761732::0::1::::<><>::res://addons/dialogue_manager/components/errors_panel.gd
+files_list.gd::GDScript::-1::1700761732::0::1::::<>VBoxContainer<>::
+files_list.tscn::PackedScene::8113335055803740416::1700761732::0::1::::<><>::res://addons/dialogue_manager/components/files_list.gd<>uid://d3lr2uas6ax8v
+parser.gd::GDScript::-1::1700761732::0::1::::DialogueManagerParser<>Object<>::
+parse_result.gd::GDScript::-1::1700761732::0::1::::DialogueManagerParseResult<>RefCounted<>::
+resolved_line_data.gd::GDScript::-1::1700761732::0::1::::<>RefCounted<>::
+resolved_tag_data.gd::GDScript::-1::1700761732::0::1::::<>RefCounted<>::
+search_and_replace.gd::GDScript::-1::1700761732::0::1::::<>VBoxContainer<>::
+search_and_replace.tscn::PackedScene::458254375860855630::1700761732::0::1::::<><>::res://addons/dialogue_manager/components/search_and_replace.gd
+settings.gd::GDScript::-1::1700761732::0::1::::<>Node<>::
+title_list.gd::GDScript::-1::1700761732::0::1::::<>VBoxContainer<>::
+title_list.tscn::PackedScene::6134415340044566558::1700761732::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
+update_button.gd::GDScript::-1::1700761732::0::1::::<>Button<>::
+update_button.tscn::PackedScene::5825087957514786930::1700761732::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk
+::res://addons/dialogue_manager/example_balloon/::1700761732
+example_balloon.gd::GDScript::-1::1700761732::0::1::::<>CanvasLayer<>::
+example_balloon.tscn::PackedScene::2304415056852043862::1700761732::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
+small_example_balloon.tscn::PackedScene::1883859960814163368::1700761732::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
+::res://addons/dialogue_manager/l10n/::1700761732
+en.mo::Translation::-1::1700761732::0::1::::<><>::
+en.po::Translation::-1::1700761732::0::1::::<><>::
+zh.po::Translation::-1::1700761732::0::1::::<><>::
+zh_TW.po::Translation::-1::1700761732::0::1::::<><>::
+::res://addons/dialogue_manager/views/::1700761732
+main_view.gd::GDScript::-1::1700761732::0::1::::<>Control<>::
+main_view.tscn::PackedScene::4884668666408697448::1700761732::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u
+settings_view.gd::GDScript::-1::1700761732::0::1::::<>TabContainer<>::
+settings_view.tscn::PackedScene::5839841081119266502::1700761732::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
+::res://Dialogues/::1700761768
+CaveDialogue.dialogue::Resource::8156612592247645053::1700761731::1700761768::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+::res://Entities/::1700768604
+gohma.gd::GDScript::-1::1700761731::0::1::::<>CharacterBody2D<>::
+gohma.tscn::PackedScene::5107330825469727249::1700765813::0::1::::<><>::res://Entities/gohma.gd<>uid://b4l0g4dnfkyqv
+OldMan.tscn::PackedScene::564713072714102716::1700761731::0::1::::<><>::uid://cx28n24pap84w
+PhantomGanon.gd::GDScript::-1::1700761731::0::1::::<>CharacterBody2D<>::
+phantom_ganon.tscn::PackedScene::3199901445276026185::1700765813::0::1::::<><>::res://Entities/PhantomGanon.gd<>uid://ctbceqdmqhiyo
+player.gd::GDScript::-1::1700761731::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::2407078115056978892::1700765813::0::1::::<><>::res://Entities/player.gd<>uid://bcax86bfiwoo4
+stalfo.gd::GDScript::-1::1700766978::0::1::::<>CharacterBody2D<>::
+stalfo.tscn::PackedScene::3598819261853782119::1700768604::0::1::::<><>::uid://bw1wj0a0g7bov::::res://Sprites/Stalfos.png<>res://Entities/stalfo.gd
+sword.gd::GDScript::-1::1700761731::0::1::::<>Area2D<>::
+sword.tscn::PackedScene::1355988042917814137::1700761731::0::1::::<><>::uid://bii2w1c2m1o3u
+::res://Images/::1700761731
+The-Legend-of-Zelda-Tears-of-the-Kingdom-Screenshot-019.jpg::CompressedTexture2D::458047995490805747::1700761731::1700761731::1::::<><>::
+zelda-background-rkp03okh2d43ik06.jpg::CompressedTexture2D::4328666718693957302::1700761731::1700761731::1::::<><>::
+Zelda_Logo.svg.png::CompressedTexture2D::790763369104927923::1700761731::1700761731::1::::<><>::
+::res://Sounds/::1700761731
+::res://Sounds/Effects/::1700761731
+BigItemAcquired.mp3::AudioStreamMP3::3016381222076223875::1700761731::1700761731::1::::<><>::
+enemy-death.mp3::AudioStreamMP3::1412545032479043264::1700761731::1700761731::1::::<><>::
+enemy-hit.mp3::AudioStreamMP3::3917447297908491218::1700761731::1700761731::1::::<><>::
+fighter-sword.mp3::AudioStreamMP3::8425466492427514795::1700761731::1700761731::1::::<><>::
+GameOver.mp3::AudioStreamMP3::4999779143942609182::1700761731::1700761731::1::::<><>::
+link-death.mp3::AudioStreamMP3::6641625516506834577::1700761731::1700761731::1::::<><>::
+link-hurt.mp3::AudioStreamMP3::5722319996670174209::1700761731::1700761731::1::::<><>::
+PhantomGanonDie.mp3::AudioStreamMP3::3350044958830128329::1700761731::1700761731::1::::<><>::
+PhantomGanonHa.mp3::AudioStreamMP3::7933127303252791235::1700761731::1700761731::1::::<><>::
+PhantomGanonHit.mp3::AudioStreamMP3::8349834027078831327::1700761731::1700761731::1::::<><>::
+PhantomGanonHurt.mp3::AudioStreamMP3::7563679070622350723::1700761731::1700761731::1::::<><>::
+::res://Sounds/Soundtrack/::1700761732
+BossBattle.mp3::AudioStreamMP3::4889694977470054152::1700761731::1700761731::1::::<><>::
+Fairy Fountain.mp3::AudioStreamMP3::2735287199705816612::1700761731::1700761731::1::::<><>::
+FinalBoss.mp3::AudioStreamMP3::3742068202990006301::1700761732::1700761732::1::::<><>::
+Inside Cave.mp3::AudioStreamMP3::5172138069325542304::1700761732::1700761732::1::::<><>::
+TheGorons.mp3::AudioStreamMP3::2166343953759232834::1700761732::1700761732::1::::<><>::
+TitleTheme.mp3::AudioStreamMP3::1149841043105639576::1700761732::1700761732::1::::<><>::
+Uncharted Territory.mp3::AudioStreamMP3::564196197785167653::1700761732::1700761732::1::::<><>::
+::res://Sprites/::1700761732
+Eyegore.png::CompressedTexture2D::2218895918585583021::1700761732::1700761732::1::::<><>::
+Gohma.png::CompressedTexture2D::4446135472482619669::1700761732::1700761732::1::::<><>::
+Link1.png::CompressedTexture2D::2528255423009064129::1700761732::1700761732::1::::<><>::
+Link_Misc.png::CompressedTexture2D::8511044331513929445::1700761732::1700761732::1::::<><>::
+Maidens.png::CompressedTexture2D::4022561789695559023::1700761732::1700761732::1::::<><>::
+OldManWalkingIdle.png::CompressedTexture2D::6444951310114559884::1700761732::1700761732::1::::<><>::
+Phantom Ganon.png::CompressedTexture2D::6108623196998936918::1700761732::1700761732::1::::<><>::
+Stalfos.png::CompressedTexture2D::3985602225550290549::1700761732::1700761732::1::::<><>::
+Sword.png::CompressedTexture2D::2966126471040984692::1700761732::1700761732::1::::<><>::
+::res://WorldScenes/::1700766917
+cave.gd::GDScript::-1::1700761732::0::1::::<>Node2D<>::
+cave.tscn::PackedScene::2122355922201882834::1700761732::0::1::::<><>::uid://djtrfep0uyt4g
+desert_temple_boss_room.tscn::PackedScene::1598183610919949926::1700765813::0::1::::<><>::uid://b5fj7xi8m8rkm
+overworld.gd::GDScript::-1::1700761732::0::1::::<>Node2D<>::
+overworld.tscn::PackedScene::18472072008951871::1700766917::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>res://WorldScenes/overworld.gd<>uid://c3iapm6tyfeg0::::res://WorldTilesets/forest_ [resources].png<>uid://bakahv7sr78hk::::res://Entities/player.tscn<>uid://8fakfct0hgx4::::res://WorldTilesets/forest_ [bridgeVertical].png<>uid://b7aqi7tlcvlfj::::res://WorldTilesets/desert_ [fencesAndWalls].png<>uid://dbsykag01g4cn::::res://WorldTilesets/forest_ [bridgeHorizontal].png<>uid://dd5837fewjxn6::::res://WorldTilesets/desert_ [resources].png<>uid://ctiw7cfmwltvb::::res://WorldTilesets/desert_ [bridgeVertical].png<>uid://ce1a80lokxmpl::::res://Entities/gohma.tscn<>uid://b5fj7xi8m8rkm::::res://WorldTilesets/desert_.png<>uid://drbrp1xtsw351::::res://WorldTilesets/DesertTemple.png<>uid://ibkh1wsxmdpl::::res://Sounds/Soundtrack/Uncharted Territory.mp3<>uid://54nmr5bxlomk::::res://Sounds/Soundtrack/TheGorons.mp3<>uid://brjka6y3vnbmt::::res://Entities/stalfo.tscn
+::res://WorldTilesets/::1700761732
+DesertTemple.png::CompressedTexture2D::8355597148491347318::1700761732::1700761732::1::::<><>::
+desert_ [bridgeVertical].png::CompressedTexture2D::6124337451132916367::1700761732::1700761732::1::::<><>::
+desert_ [fencesAndWalls].png::CompressedTexture2D::4633451148947429063::1700761732::1700761732::1::::<><>::
+desert_ [resources].png::CompressedTexture2D::7433815266288572573::1700761732::1700761732::1::::<><>::
+desert_.png::CompressedTexture2D::4503012701856437004::1700761732::1700761732::1::::<><>::
+forest_ [bridgeHorizontal].png::CompressedTexture2D::7268084770495581877::1700761732::1700761732::1::::<><>::
+forest_ [bridgeVertical].png::CompressedTexture2D::2326571853367740395::1700761732::1700761732::1::::<><>::
+forest_ [resources].png::CompressedTexture2D::6754671477256845629::1700761732::1700761732::1::::<><>::
+forest_.png::CompressedTexture2D::7831226173424330124::1700761732::1700761732::1::::<><>::

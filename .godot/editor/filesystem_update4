@@ -1,11 +1,3 @@
-res://start_screen.tscn
-res://Entities/OldMan.tscn
-res://Entities/player.tscn
-res://WorldScenes/cave.tscn
-res://Entities/sword.tscn
 res://WorldScenes/overworld.tscn
-res://PhantomGanon.gd
-res://Entities/phantom_ganon.tscn
-res://Entities/PhantomGanon.gd
-res://WorldScenes/desert_temple_boss_room.tscn
-res://Entities/gohma.tscn
+res://Entities/stalfo.tscn
+res://Entities/stalfo.gd

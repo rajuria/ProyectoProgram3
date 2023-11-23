@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://i7h5tngdyd8"]
+[gd_scene load_steps=30 format=3 uid="uid://i7h5tngdyd8"]
 
 [ext_resource type="Texture2D" uid="uid://djtrfep0uyt4g" path="res://WorldTilesets/forest_.png" id="1_twtr3"]
 [ext_resource type="Script" path="res://WorldScenes/overworld.gd" id="1_yr32y"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://drbrp1xtsw351" path="res://WorldTilesets/DesertTemple.png" id="8_ju4d2"]
 [ext_resource type="AudioStream" uid="uid://ibkh1wsxmdpl" path="res://Sounds/Soundtrack/Uncharted Territory.mp3" id="8_xc3ce"]
 [ext_resource type="AudioStream" uid="uid://54nmr5bxlomk" path="res://Sounds/Soundtrack/TheGorons.mp3" id="11_lrrca"]
+[ext_resource type="PackedScene" uid="uid://brjka6y3vnbmt" path="res://Entities/stalfo.tscn" id="15_48msd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xckk0"]
 texture = ExtResource("1_twtr3")
@@ -1638,6 +1639,18 @@ position = Vector2(177.333, 84)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StartingMusicTrigger"]
 position = Vector2(11.4167, 30.3333)
 shape = SubResource("RectangleShape2D_ph54s")
+
+[node name="stalfo" parent="." instance=ExtResource("15_48msd")]
+position = Vector2(180.667, 376)
+
+[node name="stalfo2" parent="." instance=ExtResource("15_48msd")]
+position = Vector2(77.3333, 475.333)
+
+[node name="stalfo3" parent="." instance=ExtResource("15_48msd")]
+position = Vector2(280.667, 480.667)
+
+[node name="stalfo4" parent="." instance=ExtResource("15_48msd")]
+position = Vector2(172, 452.667)
 
 [connection signal="body_entered" from="cave" to="." method="_on_cave_body_entered"]
 [connection signal="body_entered" from="DesertMusicTrigger" to="." method="_on_desert_music_trigger_body_entered"]
