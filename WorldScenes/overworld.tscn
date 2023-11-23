@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://i7h5tngdyd8"]
+[gd_scene load_steps=50 format=3 uid="uid://i7h5tngdyd8"]
 
 [ext_resource type="Texture2D" uid="uid://djtrfep0uyt4g" path="res://WorldTilesets/forest_.png" id="1_twtr3"]
 [ext_resource type="Script" path="res://WorldScenes/overworld.gd" id="1_yr32y"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://brsgk1l3c1opr" path="res://Entities/fountain.tscn" id="21_ma7ea"]
 [ext_resource type="PackedScene" uid="uid://cjbbjderowhr0" path="res://Entities/chicken.tscn" id="22_ge481"]
 [ext_resource type="AudioStream" uid="uid://bgkagx60gmpne" path="res://Sounds/Soundtrack/TundraMusic.mp3" id="24_7mwju"]
+[ext_resource type="PackedScene" uid="uid://6pdkfekjfx81" path="res://Entities/stalfos.tscn" id="25_p5hfj"]
+[ext_resource type="PackedScene" uid="uid://flxri8fkcvso" path="res://Entities/hyrondale.tscn" id="26_jkqsd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xckk0"]
 texture = ExtResource("1_twtr3")
@@ -3433,6 +3435,30 @@ position = Vector2(640, 196.667)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TundraMusicTrigger"]
 position = Vector2(-7.99988, 151)
 shape = SubResource("RectangleShape2D_3rpso")
+
+[node name="Stalfos" parent="." instance=ExtResource("25_p5hfj")]
+position = Vector2(292.667, 463.333)
+
+[node name="Stalfos2" parent="." instance=ExtResource("25_p5hfj")]
+position = Vector2(77.3333, 368)
+
+[node name="Stalfos3" parent="." instance=ExtResource("25_p5hfj")]
+position = Vector2(101.333, 496.667)
+
+[node name="Stalfos4" parent="." instance=ExtResource("25_p5hfj")]
+position = Vector2(191.333, 363.333)
+
+[node name="hyrondale" parent="." instance=ExtResource("26_jkqsd")]
+position = Vector2(608.667, 154)
+
+[node name="hyrondale2" parent="." instance=ExtResource("26_jkqsd")]
+position = Vector2(730, 260.667)
+
+[node name="hyrondale3" parent="." instance=ExtResource("26_jkqsd")]
+position = Vector2(494, 247.333)
+
+[node name="hyrondale4" parent="." instance=ExtResource("26_jkqsd")]
+position = Vector2(512.667, 168.667)
 
 [connection signal="body_entered" from="cave" to="." method="_on_cave_body_entered"]
 [connection signal="body_entered" from="DesertMusicTrigger" to="." method="_on_desert_music_trigger_body_entered"]

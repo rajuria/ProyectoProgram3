@@ -1,6 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://6pdkfekjfx81"]
+[gd_scene load_steps=29 format=3 uid="uid://6pdkfekjfx81"]
 
+[ext_resource type="Script" path="res://Entities/stalfos.gd" id="1_4nab6"]
 [ext_resource type="Texture2D" uid="uid://bw1wj0a0g7bov" path="res://Sprites/Stalfos.png" id="1_mmvbt"]
+[ext_resource type="AudioStream" uid="uid://cnr61ldh742th" path="res://Sounds/Effects/link-hurt.mp3" id="3_rw1ya"]
+[ext_resource type="AudioStream" uid="uid://uein7k2m6biu" path="res://Sounds/Effects/enemy-death.mp3" id="4_mxjwh"]
+[ext_resource type="AudioStream" uid="uid://bv2v1xb5q42hq" path="res://Sounds/Effects/enemy-hit.mp3" id="5_g556y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bsis"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(23, 321, 23, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm54d"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(69, 321, 23, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10uoy"]
 atlas = ExtResource("1_mmvbt")
@@ -9,6 +21,22 @@ region = Rect2(7, 89, 28, 38)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ge7lj"]
 atlas = ExtResource("1_mmvbt")
 region = Rect2(103, 89, 28, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_big2x"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(71, 94, 31, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_788cc"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(102, 94, 31, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75e3j"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(168, 94, 33, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cnsg"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(210, 94, 35, 29)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0nidc"]
 atlas = ExtResource("1_mmvbt")
@@ -22,6 +50,14 @@ region = Rect2(50, 166, 29, 38)
 atlas = ExtResource("1_mmvbt")
 region = Rect2(79, 166, 29, 38)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ygfu"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(167, 167, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vefax"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(202, 167, 31, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_rq1ec"]
 atlas = ExtResource("1_mmvbt")
 region = Rect2(5, 126, 31, 41)
@@ -30,14 +66,53 @@ region = Rect2(5, 126, 31, 41)
 atlas = ExtResource("1_mmvbt")
 region = Rect2(101, 126, 31, 41)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bwut"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(74, 132, 27, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jeer"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(101, 132, 27, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3cwp"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(169, 132, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnxs1"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(203, 132, 44, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_27dld"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bsis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sm54d")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_10uoy")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ge7lj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_big2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_788cc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75e3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cnsg")
 }],
 "loop": true,
 "name": &"WalkingDown",
@@ -55,6 +130,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_aohjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ygfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vefax")
 }],
 "loop": true,
 "name": &"WalkingRight",
@@ -66,17 +147,79 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fj6xb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bwut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jeer")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3cwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnxs1")
 }],
 "loop": true,
 "name": &"WalkingUp",
 "speed": 5.0
 }]
 
-[node name="Stalfos" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iaa5b"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[sub_resource type="CircleShape2D" id="CircleShape2D_22obo"]
+radius = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ofi5c"]
+radius = 41.0488
+
+[node name="Stalfos" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_4nab6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_27dld")
-animation = &"WalkingUp"
-frame_progress = 0.319715
+animation = &"WalkingDown"
+autoplay = "WalkingDown"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_iaa5b")
+
+[node name="StalfosHitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StalfosHitBox"]
+shape = SubResource("CircleShape2D_22obo")
+
+[node name="StalfosTerritory" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StalfosTerritory"]
+shape = SubResource("CircleShape2D_ofi5c")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0, 1, 0, 1)
+offset_left = -16.0
+offset_top = -20.0
+offset_right = 18.0
+offset_bottom = -15.0
+show_percentage = false
+
+[node name="PlayerHit" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-28, -23)
+stream = ExtResource("3_rw1ya")
+
+[node name="Death" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-28, -23)
+stream = ExtResource("4_mxjwh")
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-28, -23)
+stream = ExtResource("5_g556y")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="StalfosHitBox" to="." method="_on_stalfos_hit_box_body_entered"]
+[connection signal="body_exited" from="StalfosHitBox" to="." method="_on_stalfos_hit_box_body_exited"]
+[connection signal="body_entered" from="StalfosTerritory" to="." method="_on_stalfos_territory_body_entered"]
+[connection signal="body_exited" from="StalfosTerritory" to="." method="_on_stalfos_territory_body_exited"]
