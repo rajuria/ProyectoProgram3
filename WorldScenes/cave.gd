@@ -8,8 +8,9 @@ func _ready():
 	if Global.LinkHasSword:
 		$Sword.queue_free()
 	if not Global.StartingDialogue:
-		DialogueManager.show_example_dialogue_balloon(load("res://Dialogues/CaveDialogue.dialogue"),"start")
-		Global.StartingDialogue=true
+		pass
+		#DialogueManager.show_example_dialogue_balloon(load("res://Dialogues/CaveDialogue.dialogue"),"start")
+		#Global.StartingDialogue=true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

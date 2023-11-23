@@ -26,6 +26,7 @@ func _on_desert_music_trigger_body_entered(body):
 	if body.is_in_group("Player") and not $DesertMusic.playing:
 		$DesertMusic.play()
 		$StartingAreaMusic.stop()
+		$TundraMusic.stop()
 
 
 
@@ -33,3 +34,11 @@ func _on_starting_music_trigger_body_entered(body):
 	if body.is_in_group("Player") and not $StartingAreaMusic.playing:
 		$StartingAreaMusic.play()
 		$DesertMusic.stop()
+		$TundraMusic.stop()
+
+
+func _on_tundra_music_trigger_body_entered(body):
+	if body.is_in_group("Player") and not $StartingAreaMusic.playing:
+		$StartingAreaMusic.stop()
+		$DesertMusic.stop()
+		$TundraMusic.play()

@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjbbjderowhr0"]
+
+[ext_resource type="Script" path="res://Entities/chicken.gd" id="1_8uftf"]
+[ext_resource type="Texture2D" uid="uid://bsvoykdf7oi36" path="res://Sprites/Chicken.png" id="1_m2nqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmn76"]
+atlas = ExtResource("1_m2nqr")
+region = Rect2(0, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1axh"]
+atlas = ExtResource("1_m2nqr")
+region = Rect2(26, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mqk3"]
+atlas = ExtResource("1_m2nqr")
+region = Rect2(0, 26, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1n38"]
+atlas = ExtResource("1_m2nqr")
+region = Rect2(26, 26, 26, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slw68"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmn76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1axh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mqk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1n38")
+}],
+"loop": true,
+"name": &"scared",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5nmvr"]
+
+[node name="Chicken" type="CharacterBody2D"]
+script = ExtResource("1_8uftf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_slw68")
+autoplay = "default"
+frame_progress = 0.668968
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5nmvr")

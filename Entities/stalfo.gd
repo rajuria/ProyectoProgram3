@@ -6,8 +6,8 @@ var LastDirection=Vector2.ZERO
 var AnimatedSprite
 var DirectionChangeTimer=0
 var DirectionChangeInterval =3 #Seconds!
-var MinPosition = Vector2(10,10) #Boundaries
-var MaxPosition = Vector2(320,550)
+var MinPosition = Vector2(50,450) #Boundaries
+var MaxPosition = Vector2(550,700)
 var Attacking = false
 var Player = null
 var PlayerInRange = false
@@ -113,3 +113,34 @@ func Die():
 		$Death.play()
 		Dead=true
 		#queue_free()
+
+
+func _on_stalfo_hit_box_body_entered(body):
+	if body.is_in_group("Player"):
+		PlayerInRange=true
+		AttackSpeed=0
+
+
+func _on_stalfo_hit_box_body_exited(body):
+	if body.is_in_group("Player"):
+		PlayerInRange=false
+		AttackSpeed=60
+
+
+func _on_animated_sprite_2d_animation_finished():
+	if AnimatedSprite.animation=="Death":
+		queue_free()
+
+
+func _on_stalfo_territory_body_entered(body):
+	if body.is_in_group("Player"):
+		Player=body
+		Attacking=true
+
+
+func _on_stalfo_territory_body_exited(body):
+	if body.is_in_group("Player"):
+		Player=null
+		Attacking=false
+		PickRandomDirection()
+		UpdateAnimation(LastDirection)
