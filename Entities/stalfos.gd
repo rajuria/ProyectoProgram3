@@ -1,23 +1,23 @@
 extends CharacterBody2D
 
-var Speed=20
-var AttackSpeed = 50
+var Speed=50
+var AttackSpeed = 150
 var LastDirection=Vector2.ZERO
 var AnimatedSprite
 var DirectionChangeTimer=0
 var DirectionChangeInterval =3 #Seconds!
-var MinPosition = Vector2(120,120) #Boundaries
-var MaxPosition = Vector2(500,300)
+var MinPosition = Vector2(10,250) #Boundaries
+var MaxPosition = Vector2(320,700)
 var Attacking = false
 var Player = null
 var PlayerInRange = false
-var Health = 100
+var Health = 75
 var Dead = false
 var DamageTimer=0.0
 var DamageInterval=0.5
 var DamageFromPlayerTimer=0.0
 var DamagefromPlayerInterval=0.1
-var EnemyKnockBack=2
+var EnemyKnockBack=0
 
 
 func _ready():
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	if PlayerInRange and Player.Attacking:
 		DamageFromPlayerTimer+=delta
 	if DamageFromPlayerTimer>=DamagefromPlayerInterval and Player.Attacking:
-		Health-=10
+		Health-=25
 		KnockBack(Player.LastDirection)
 		$Hit.play()
 		DamageFromPlayerTimer=0.0
@@ -60,23 +60,34 @@ func _physics_process(delta):
 	if PlayerInRange:
 		DamageTimer+=delta
 	if DamageTimer>=DamageInterval:
-		Player.Health-=10
+		var Multiplier
+		if(Global.LinkHasSword):
+			Multiplier=1
+		else:
+			Multiplier=100
+		Player.Health-=(10*Multiplier)
 		$PlayerHit.play()
 		DamageTimer=0.0
 		PlayerKnockBack(LastDirection)
 		
 func UpdateAnimation(Direction):
+	if Direction.x !=0:
+		AnimatedSprite.play("WalkingRight")
 		AnimatedSprite.flip_h=Direction.x<0
+	elif Direction.y<0:
+		AnimatedSprite.play("WalkingUp")
+	elif Direction.y>0:
+		AnimatedSprite.play("WalkingDown")
 		
 func KnockBack(Direction):
 	if Direction.x>0:
-		position.x+=0*Player.KnockBack
+		position.x+=20*Player.KnockBack
 	elif Direction.x<0:
-		position.x-=0*Player.KnockBack
+		position.x-=20*Player.KnockBack
 	elif Direction.y>0:
-		position.y+=0*Player.KnockBack
+		position.y+=20*Player.KnockBack
 	elif Direction.y<0:
-		position.y-=0*Player.KnockBack
+		position.y-=20*Player.KnockBack
 func PlayerKnockBack(Direction):
 	if Direction.x>0:
 		Player.position.x+=20*EnemyKnockBack
@@ -97,7 +108,7 @@ func PickRandomDirection():
 func UpdateHealth():
 	var HealthBar=$HealthBar
 	HealthBar.value=Health
-	if Health>=10:
+	if Health>=50:
 		HealthBar.visible=false
 	else:
 		HealthBar.visible=true
@@ -107,6 +118,32 @@ func Die():
 		$Death.play()
 		Dead=true
 		#queue_free()
+
+
+
+func _on_hitbox_body_entered(body):
+	if body.is_in_group("Player"):
+		PlayerInRange=true
+		AttackSpeed=0
+
+func _on_hitbox_body_exited(body):
+	if body.is_in_group("Player"):
+		PlayerInRange=false
+		AttackSpeed=60
+
+func _on_territory_body_entered(body):
+	if body.is_in_group("Player"):
+		Player=body
+		Attacking=true
+
+
+func _on_territory_body_exited(body):
+	if body.is_in_group("Player"):
+		Player=null
+		Attacking=false
+		PickRandomDirection()
+		UpdateAnimation(LastDirection)
+
 
 func _on_animated_sprite_2d_animation_finished():
 	if AnimatedSprite.animation=="Death":

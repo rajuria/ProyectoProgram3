@@ -10,3 +10,8 @@ res://Entities/chicken.tscn
 res://Entities/chicken.gd
 res://WorldScenes/cave.gd
 res://WorldScenes/overworld.gd
+res://Entities/stalfos.tscn
+res://Entities/village_elder.tscn
+res://Entities/PhantomGanon.gd
+res://Entities/stalfos.gd
+res://global.gd

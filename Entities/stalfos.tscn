@@ -1,6 +1,26 @@
-[gd_scene load_steps=10 format=3 uid="uid://6pdkfekjfx81"]
+[gd_scene load_steps=20 format=3 uid="uid://6pdkfekjfx81"]
 
+[ext_resource type="Script" path="res://Entities/stalfos.gd" id="1_bb8yy"]
 [ext_resource type="Texture2D" uid="uid://bw1wj0a0g7bov" path="res://Sprites/Stalfos.png" id="1_mmvbt"]
+[ext_resource type="AudioStream" uid="uid://bv2v1xb5q42hq" path="res://Sounds/Effects/enemy-hit.mp3" id="2_8wdma"]
+[ext_resource type="AudioStream" uid="uid://uein7k2m6biu" path="res://Sounds/Effects/enemy-death.mp3" id="3_scfsq"]
+[ext_resource type="AudioStream" uid="uid://cnr61ldh742th" path="res://Sounds/Effects/link-hurt.mp3" id="4_xvyju"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tplx"]
+radius = 5.0
+height = 22.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cccpn"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(25, 317, 22, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e61cj"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(47, 317, 22, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk671"]
+atlas = ExtResource("1_mmvbt")
+region = Rect2(69, 317, 22, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10uoy"]
 atlas = ExtResource("1_mmvbt")
@@ -32,6 +52,38 @@ region = Rect2(101, 126, 31, 41)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_27dld"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cccpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e61cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk671")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cccpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e61cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk671")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cccpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e61cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk671")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 7.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_10uoy")
@@ -72,11 +124,53 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dddsq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vpdxt"]
+radius = 85.0529
+
 [node name="Stalfos" type="CharacterBody2D"]
+script = ExtResource("1_bb8yy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_2tplx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_27dld")
-animation = &"WalkingUp"
-frame_progress = 0.319715
+animation = &"Death"
+autoplay = "WalkingDown"
+frame_progress = 0.472623
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_dddsq")
+
+[node name="Territory" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Territory"]
+shape = SubResource("CircleShape2D_vpdxt")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0.745098, 0.827451, 0.996078, 1)
+offset_left = -16.0
+offset_top = -22.0
+offset_right = 17.0
+offset_bottom = -17.0
+max_value = 75.0
+show_percentage = false
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_8wdma")
+
+[node name="Death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_scfsq")
+
+[node name="PlayerHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xvyju")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="body_entered" from="Territory" to="." method="_on_territory_body_entered"]
+[connection signal="body_exited" from="Territory" to="." method="_on_territory_body_exited"]

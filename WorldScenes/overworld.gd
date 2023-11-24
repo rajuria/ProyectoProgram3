@@ -38,7 +38,7 @@ func _on_starting_music_trigger_body_entered(body):
 
 
 func _on_tundra_music_trigger_body_entered(body):
-	if body.is_in_group("Player") and not $StartingAreaMusic.playing:
+	if body.is_in_group("Player") and not $TundraMusic.playing:
 		$StartingAreaMusic.stop()
 		$DesertMusic.stop()
 		$TundraMusic.play()

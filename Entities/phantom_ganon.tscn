@@ -109,8 +109,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5emjh"]
-radius = 24.0
-height = 124.0
+radius = 14.0
+height = 74.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s5dtn"]
 radius = 16.0
@@ -125,14 +125,13 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, 1)
-rotation = 1.5708
+position = Vector2(3, 22)
 shape = SubResource("CapsuleShape2D_5emjh")
 
 [node name="PhamtomGanonHitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PhamtomGanonHitbox"]
-position = Vector2(3, 4)
+position = Vector2(4, 22)
 shape = SubResource("CapsuleShape2D_s5dtn")
 
 [node name="HealthBar" type="ProgressBar" parent="."]

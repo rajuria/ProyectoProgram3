@@ -168,6 +168,7 @@ offset_left = -28.0
 offset_top = -23.0
 offset_right = 28.0
 offset_bottom = -18.0
+max_value = 50.0
 show_percentage = false
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="."]
