@@ -2017,6 +2017,8 @@ texture = ExtResource("4_qbife")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36.7696, 8.48528, 13.5, 11.5, 40, 5, 38.5, 25, -35, 21)
+1:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(-36.0625, -24.0416, -31.1127, -12.7279, 40.5, -13, 43, -26)
 6:1/0 = 0
 6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:1/0/physics_layer_0/angular_velocity = 0.0
@@ -2548,6 +2550,8 @@ texture = ExtResource("14_bwfke")
 6:1/0 = 0
 6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:1/0/physics_layer_0/angular_velocity = 0.0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-27.5, 10.5, 1.5, 12, 22, 8.5, 21, 20, -25.5, 23)
+6:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(-29.5, -28, -31, -13.5, 39, -14, 25.5, -24)
 9:1/0 = 0
 9:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:1/0/physics_layer_0/angular_velocity = 0.0
@@ -3350,6 +3354,7 @@ z_index = 1
 y_sort_enabled = true
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_yr32y")
+metadata/_edit_horizontal_guides_ = [92.0]
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = 1

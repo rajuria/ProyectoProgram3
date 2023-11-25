@@ -1,12 +1,12 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1700787502
+::res://::1700928971
 game_over.gd::GDScript::-1::1700761732::0::1::::<>CanvasLayer<>::
 game_over.tscn::PackedScene::302608030227263226::1700761732::0::1::::<><>::res://game_over.gd<>uid://cdh6vqvcib3be
 global.gd::GDScript::-1::1700761732::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::8269338123927388465::1700761732::1700761768::1::::<><>::
 overworld.tscn::PackedScene::18472072008951871::1700727198::0::1::::<><>::res://Entities/hyrule.gd<>uid://djtrfep0uyt4g
 start_screen.gd::GDScript::-1::1700761732::0::1::::<>CanvasLayer<>::
-start_screen.tscn::PackedScene::6159561544217563059::1700761732::0::1::::<><>::res://start_screen.gd<>uid://b2w3rj0mlqgi5
+start_screen.tscn::PackedScene::6159561544217563059::1700837704::0::1::::<><>::res://start_screen.gd<>uid://b2w3rj0mlqgi5::::res://Images/zelda-background-rkp03okh2d43ik06.jpg<>uid://ljb00jknxsc6::::res://Images/Zelda_Logo.svg.png<>uid://qm8yjmrj4rjk::::res://Sounds/Soundtrack/TitleTheme.mp3
 ::res://addons/::1700761732
 ::res://addons/dialogue_manager/::1700761732
 constants.gd::GDScript::-1::1700761732::0::1::::<>Node<>::
@@ -65,26 +65,26 @@ settings_view.gd::GDScript::-1::1700761732::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1700761732::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
 ::res://Dialogues/::1700777105
 CaveDialogue.dialogue::Resource::8156612592247645053::1700761731::1700777105::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-::res://Entities/::1700787347
+::res://Entities/::1700837704
 chicken.gd::GDScript::-1::1700777058::0::1::::<>CharacterBody2D<>::
-chicken.tscn::PackedScene::5406682291561716263::1700777058::0::1::::<><>::res://Entities/chicken.gd<>uid://bsvoykdf7oi36::::res://Sprites/Chicken.png
-fountain.tscn::PackedScene::3617173368884230775::1700777058::0::1::::<><>::uid://dbqjqxeixt482::::res://WorldTilesets/tundra_ [fountain].png
+chicken.tscn::PackedScene::5406682291561716263::1700777058::0::1::::<><>::res://Entities/chicken.gd<>uid://bsvoykdf7oi36
+fountain.tscn::PackedScene::3617173368884230775::1700777058::0::1::::<><>::uid://dbqjqxeixt482
 gohma.gd::GDScript::-1::1700761731::0::1::::<>CharacterBody2D<>::
-gohma.tscn::PackedScene::5107330825469727249::1700787347::0::1::::<><>::res://Entities/gohma.gd<>uid://b4l0g4dnfkyqv::::res://Sprites/Gohma.png<>uid://bv2v1xb5q42hq::::res://Sounds/Effects/enemy-hit.mp3<>uid://uein7k2m6biu::::res://Sounds/Effects/enemy-death.mp3<>uid://cnr61ldh742th::::res://Sounds/Effects/link-hurt.mp3
+gohma.tscn::PackedScene::5107330825469727249::1700787347::0::1::::<><>::res://Entities/gohma.gd<>uid://b4l0g4dnfkyqv
 hyrondale.gd::GDScript::-1::1700782329::0::1::::<>CharacterBody2D<>::
 hyrondale.tscn::PackedScene::375079694220822230::1700782361::0::1::::<><>::uid://bxktaf0peuy12
 OldMan.tscn::PackedScene::564713072714102716::1700761731::0::1::::<><>::uid://cx28n24pap84w
 PhantomGanon.gd::GDScript::-1::1700787347::0::1::::<>CharacterBody2D<>::
-phantom_ganon.tscn::PackedScene::3199901445276026185::1700787347::0::1::::<><>::res://Entities/PhantomGanon.gd<>uid://ctbceqdmqhiyo::::res://Sprites/Phantom Ganon.png<>uid://dla4phqbw448f::::res://Sounds/Effects/PhantomGanonHa.mp3<>uid://dq7yst0vt3n3d::::res://Sounds/Effects/PhantomGanonHit.mp3<>uid://df05xo0li21t4::::res://Sounds/Effects/PhantomGanonHurt.mp3<>uid://bny10sgiyx3ir::::res://Sounds/Effects/PhantomGanonDie.mp3<>uid://cnr61ldh742th::::res://Sounds/Effects/link-hurt.mp3
+phantom_ganon.tscn::PackedScene::3199901445276026185::1700787347::0::1::::<><>::res://Entities/PhantomGanon.gd<>uid://ctbceqdmqhiyo
 player.gd::GDScript::-1::1700761731::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::2407078115056978892::1700782360::0::1::::<><>::res://Entities/player.gd<>uid://bcax86bfiwoo4::::res://Sprites/Link1.png<>uid://dsbmg4xp70iit::::res://Sounds/Effects/fighter-sword.mp3<>uid://dti2wldnuhc5j::::res://Sprites/Link_Misc.png<>uid://c1viup2g7ynp6::::res://Sounds/Effects/link-death.mp3<>uid://cnr61ldh742th::::res://Sounds/Effects/link-hurt.mp3
+player.tscn::PackedScene::2407078115056978892::1700782360::0::1::::<><>::res://Entities/player.gd<>uid://bcax86bfiwoo4
 stalfo.gd::GDScript::-1::1700781233::0::1::::<>RefCounted<>::
-stalfo.tscn::PackedScene::3598819261853782119::1700779266::0::1::::<><>::uid://bw1wj0a0g7bov::::res://Sprites/Stalfos.png<>res://Entities/stalfo.gd<>uid://bv2v1xb5q42hq::::res://Sounds/Effects/enemy-hit.mp3<>uid://uein7k2m6biu::::res://Sounds/Effects/enemy-death.mp3<>uid://cnr61ldh742th::::res://Sounds/Effects/link-hurt.mp3
+stalfo.tscn::PackedScene::3598819261853782119::1700779266::0::1::::<><>::uid://bw1wj0a0g7bov
 stalfos.gd::GDScript::-1::1700787347::0::1::::<>CharacterBody2D<>::
-stalfos.tscn::PackedScene::2207020097269822800::1700787347::0::1::::<><>::res://Entities/stalfos.gd<>uid://bw1wj0a0g7bov::::res://Sprites/Stalfos.png<>uid://bv2v1xb5q42hq::::res://Sounds/Effects/enemy-hit.mp3<>uid://uein7k2m6biu::::res://Sounds/Effects/enemy-death.mp3<>uid://cnr61ldh742th::::res://Sounds/Effects/link-hurt.mp3
+stalfos.tscn::PackedScene::2207020097269822800::1700837704::0::1::::<><>::res://Entities/stalfos.gd<>uid://bw1wj0a0g7bov::::res://Sprites/Stalfos.png<>uid://bv2v1xb5q42hq::::res://Sounds/Effects/enemy-hit.mp3<>uid://uein7k2m6biu::::res://Sounds/Effects/enemy-death.mp3<>uid://cnr61ldh742th::::res://Sounds/Effects/link-hurt.mp3
 sword.gd::GDScript::-1::1700761731::0::1::::<>Area2D<>::
 sword.tscn::PackedScene::1355988042917814137::1700761731::0::1::::<><>::uid://bii2w1c2m1o3u
-village_elder.tscn::PackedScene::3010878555543420873::1700787347::0::1::::<><>::uid://qbs7xlrbw1a8::::res://Sprites/NPCs.png
+village_elder.tscn::PackedScene::3010878555543420873::1700787347::0::1::::<><>::uid://qbs7xlrbw1a8
 ::res://Images/::1700761731
 The-Legend-of-Zelda-Tears-of-the-Kingdom-Screenshot-019.jpg::CompressedTexture2D::458047995490805747::1700761731::1700761731::1::::<><>::
 zelda-background-rkp03okh2d43ik06.jpg::CompressedTexture2D::4328666718693957302::1700761731::1700761731::1::::<><>::
@@ -127,9 +127,9 @@ Sword.png::CompressedTexture2D::2966126471040984692::1700761732::1700761732::1::
 ::res://WorldScenes/::1700787347
 cave.gd::GDScript::-1::1700777058::0::1::::<>Node2D<>::
 cave.tscn::PackedScene::2122355922201882834::1700761732::0::1::::<><>::uid://djtrfep0uyt4g
-desert_temple_boss_room.tscn::PackedScene::1598183610919949926::1700787347::0::1::::<><>::uid://b5fj7xi8m8rkm::::res://WorldTilesets/desert_.png<>uid://blub56e27wdqn::::res://Entities/phantom_ganon.tscn<>uid://bakahv7sr78hk::::res://Entities/player.tscn<>uid://cbwutdsl5otlw::::res://Sounds/Soundtrack/BossBattle.mp3
+desert_temple_boss_room.tscn::PackedScene::1598183610919949926::1700787347::0::1::::<><>::uid://b5fj7xi8m8rkm
 overworld.gd::GDScript::-1::1700787347::0::1::::<>Node2D<>::
-overworld.tscn::PackedScene::18472072008951871::1700787347::0::1::::<><>::uid://djtrfep0uyt4g::::res://WorldTilesets/forest_.png<>res://WorldScenes/overworld.gd<>uid://c3iapm6tyfeg0::::res://WorldTilesets/forest_ [resources].png<>uid://bakahv7sr78hk::::res://Entities/player.tscn<>uid://8fakfct0hgx4::::res://WorldTilesets/forest_ [bridgeVertical].png<>uid://b7aqi7tlcvlfj::::res://WorldTilesets/desert_ [fencesAndWalls].png<>uid://dbsykag01g4cn::::res://WorldTilesets/forest_ [bridgeHorizontal].png<>uid://dd5837fewjxn6::::res://WorldTilesets/desert_ [resources].png<>uid://dbv2wxxfsn8om::::res://WorldTilesets/ice_.png<>uid://ctiw7cfmwltvb::::res://WorldTilesets/desert_ [bridgeVertical].png<>uid://ce1a80lokxmpl::::res://Entities/gohma.tscn<>uid://b5fj7xi8m8rkm::::res://WorldTilesets/desert_.png<>uid://c40arqf8e7s7f::::res://WorldTilesets/tundra_ [resources].png<>uid://drbrp1xtsw351::::res://WorldTilesets/DesertTemple.png<>uid://ibkh1wsxmdpl::::res://Sounds/Soundtrack/Uncharted Territory.mp3<>uid://dbqjqxeixt482::::res://WorldTilesets/tundra_ [fountain].png<>uid://drhbjn7gk1j48::::res://WorldTilesets/tundra_ [fencesAndWalls].png<>uid://cfwcnfvtxqn0a::::res://WorldTilesets/HyruleCastle.png<>uid://54nmr5bxlomk::::res://Sounds/Soundtrack/TheGorons.mp3<>uid://dtrnkps888twt::::res://WorldTilesets/tundra_ [bridgeHorizontal].png<>uid://bwim7njrbp3ii::::res://WorldTilesets/tundra_.png<>uid://gpfpb1ipriia::::res://WorldTilesets/igloo_.png<>uid://brsgk1l3c1opr::::res://Entities/fountain.tscn<>uid://cjbbjderowhr0::::res://Entities/chicken.tscn<>uid://bi5qy21tuxmfx::::res://Entities/village_elder.tscn<>uid://6pdkfekjfx81::::res://Entities/stalfos.tscn<>uid://bgkagx60gmpne::::res://Sounds/Soundtrack/TundraMusic.mp3
+overworld.tscn::PackedScene::18472072008951871::1700787347::0::1::::<><>::uid://djtrfep0uyt4g
 ::res://WorldTilesets/::1700787347
 DesertTemple.png::CompressedTexture2D::8355597148491347318::1700761732::1700761732::1::::<><>::
 desert_ [bridgeVertical].png::CompressedTexture2D::6124337451132916367::1700761732::1700761732::1::::<><>::
