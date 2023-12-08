@@ -2017,8 +2017,8 @@ texture = ExtResource("4_qbife")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36.7696, 8.48528, 13.5, 11.5, 40, 5, 38.5, 25, -35, 21)
-1:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(-36.0625, -24.0416, -31.1127, -12.7279, 40.5, -13, 43, -26)
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36.7696, 8.48528, 13, 8.5, 40.5, 8.5, 38.5, 25, -35, 21)
+1:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(-36.0625, -24.0416, -35, -12.5, 40.5, -13, 38.8909, -24.0416)
 6:1/0 = 0
 6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:1/0/physics_layer_0/angular_velocity = 0.0
@@ -2550,8 +2550,8 @@ texture = ExtResource("14_bwfke")
 6:1/0 = 0
 6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:1/0/physics_layer_0/angular_velocity = 0.0
-6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-27.5, 10.5, 1.5, 12, 22, 8.5, 21, 20, -25.5, 23)
-6:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(-29.5, -28, -31, -13.5, 39, -14, 25.5, -24)
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25.8094, 8.13173, 2.12132, 8, 22, 8.5, 21, 20, -26.163, 20.1525)
+6:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(-25.5, -24, -25.5, -13.5, 19.5, -13, 19.799, -23.6881)
 9:1/0 = 0
 9:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:1/0/physics_layer_0/angular_velocity = 0.0
@@ -3347,7 +3347,7 @@ size = Vector2(361, 307.333)
 size = Vector2(358.5, 208.667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rpso"]
-size = Vector2(341.333, 94.3334)
+size = Vector2(341.333, 662.333)
 
 [node name="Overworld" type="Node2D"]
 z_index = 1
@@ -3483,7 +3483,7 @@ shape = SubResource("RectangleShape2D_ph54s")
 position = Vector2(640, 196.667)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TundraMusicTrigger"]
-position = Vector2(-10.6666, -133.833)
+position = Vector2(-10.6666, 150.167)
 shape = SubResource("RectangleShape2D_3rpso")
 
 [connection signal="body_entered" from="cave" to="." method="_on_cave_body_entered"]

@@ -9,6 +9,8 @@ var Attacking=false
 var AttackTimer=0.0
 var AttackDuration=0.2
 var KnockBack = 1
+var ArrowSpeed = 200
+var Arrow = preload("res://Entities/arrow.tscn")
 
 func _ready():
 	AnimatedSprite = $AnimatedSprite2D
@@ -44,6 +46,7 @@ func UpdateAnimation():
 		return
 	var Direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	velocity = Direction*Speed
+	#look_at(Direction)
 	
 	if Direction != Vector2.ZERO:
 		LastDirection=Direction
@@ -70,6 +73,15 @@ func _input(event):
 		$AttackSound.play()
 	if event.is_action_pressed("ui_cancel"):
 		Health=0
+	if event.is_action_pressed("Shoot"):
+		Shoot()
+		
+func Shoot():
+	if(Global.LinkCanShoot):
+		var ArrowInstance = Arrow.instantiate()
+		add_sibling(ArrowInstance)
+		ArrowInstance.position = position
+		ArrowInstance.rotation = LastDirection.angle()
 	
 func UpdateHealth():
 	var HealthBar = $HealthBar

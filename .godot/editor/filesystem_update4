@@ -1,4 +1,11 @@
 res://WorldScenes/overworld.tscn
+res://Entities/player.gd
 res://start_screen.tscn
 res://Entities/stalfos.tscn
 res://Entities/chicken.tscn
+res://Entities/gohma.tscn
+res://Entities/player.tscn
+res://Entities/arrow.tscn
+res://global.gd
+res://Entities/arrow.gd
+res://Entities/gohma.gd
