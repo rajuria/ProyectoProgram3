@@ -9,7 +9,7 @@ var Attacking=false
 var AttackTimer=0.0
 var AttackDuration=0.2
 var KnockBack = 1
-var ArrowSpeed = 200
+var DrawingBow=false
 var Arrow = preload("res://Entities/arrow.tscn")
 
 func _ready():
@@ -34,6 +34,15 @@ func UpdateAnimation():
 		return
 	if Global.PlaySwordAnimation:
 		velocity=Vector2.ZERO
+		return
+	if DrawingBow:
+		velocity=Vector2.ZERO
+		if LastDirection.y<0:
+			AnimatedSprite.play("DrawBowUp")
+		elif LastDirection.y>0:
+			AnimatedSprite.play("DrawBowDown")
+		elif LastDirection.x !=0:
+			AnimatedSprite.play("DrawBowRight")
 		return
 	
 	if Attacking:
@@ -74,10 +83,11 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		Health=0
 	if event.is_action_pressed("Shoot"):
-		Shoot()
+		DrawingBow=true
 		
 func Shoot():
 	if(Global.LinkCanShoot):
+		$Shoot.play()
 		var ArrowInstance = Arrow.instantiate()
 		add_sibling(ArrowInstance)
 		ArrowInstance.position = position
@@ -113,3 +123,6 @@ func _on_hitbox_body_exited(body):
 func _on_animated_sprite_2d_animation_finished():
 	if AnimatedSprite.animation=="Death":
 		get_tree().change_scene_to_file("res://game_over.tscn")
+	if AnimatedSprite.animation=="DrawBowUp" || AnimatedSprite.animation=="DrawBowDown" || AnimatedSprite.animation=="DrawBowRight" :
+		Shoot()
+		DrawingBow=false

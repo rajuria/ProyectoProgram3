@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://28hr7pgdpowx"]
+
+[ext_resource type="Script" path="res://Entities/bow.gd" id="1_tfi4d"]
+[ext_resource type="Texture2D" uid="uid://bhxnx5s02tf3m" path="res://Sprites/Items.png" id="1_uabye"]
+[ext_resource type="AudioStream" uid="uid://bi8fmf470t3fb" path="res://Sounds/Effects/BigItemAcquired.mp3" id="2_6q21v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88ik5"]
+size = Vector2(15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2q2p"]
+atlas = ExtResource("1_uabye")
+region = Rect2(249, 18, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gxven"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2q2p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bow" type="Area2D"]
+script = ExtResource("1_tfi4d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_88ik5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gxven")
+
+[node name="ItemAcquired" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_6q21v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

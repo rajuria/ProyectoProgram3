@@ -11,31 +11,37 @@ var MaxPosition = Vector2(500,300)
 var Attacking = false
 var Player = null
 var PlayerInRange = false
-var Health = 100
+var Health = 300
 var Dead = false
 var DamageTimer=0.0
 var DamageInterval=0.5
 var DamageFromPlayerTimer=0.0
 var DamagefromPlayerInterval=0.1
 var EnemyKnockBack=2
+var Weakened=false
 
 
 func _ready():
 	AnimatedSprite=$AnimatedSprite2D
 	PickRandomDirection()
-	add_to_group("Enemy")
+	add_to_group("Boss")
 	
 func _physics_process(delta):
 	if Dead:
-		AnimatedSprite.play("Death")
+		position-=Vector2(0,0.1)
 		return
-	if PlayerInRange and Player.Attacking:
-		DamageFromPlayerTimer+=delta
-	if DamageFromPlayerTimer>=DamagefromPlayerInterval and Player.Attacking:
-		Health-=10
-		KnockBack(Player.LastDirection)
-		$Hit.play()
-		DamageFromPlayerTimer=0.0
+	if Weakened:
+		velocity=Vector2(0,0)
+		UpdateHealth()
+		Die()
+		if PlayerInRange and Player.Attacking:
+			DamageFromPlayerTimer+=delta
+		if DamageFromPlayerTimer>=DamagefromPlayerInterval and Player.Attacking:
+			Health-=10
+			KnockBack(Player.LastDirection)
+			$Hurt.play()
+			DamageFromPlayerTimer=0.0
+		return
 	UpdateHealth()
 	Die()
 	if Attacking and not Global.LinkIsDead:
@@ -59,14 +65,14 @@ func _physics_process(delta):
 		LastDirection=-LastDirection
 	if PlayerInRange:
 		DamageTimer+=delta
-	if DamageTimer>=DamageInterval:
-		Player.Health-=10
-		$PlayerHit.play()
+	if DamageTimer>=DamageInterval and not Weakened:
+		AnimatedSprite.play("Attacking")
+		$HA.play()
 		DamageTimer=0.0
-		PlayerKnockBack(LastDirection)
 		
 func UpdateAnimation(Direction):
-		AnimatedSprite.flip_h=Direction.x<0
+	pass
+		#AnimatedSprite.flip_h=Direction.x<0
 		
 func KnockBack(Direction):
 	if Direction.x>0:
@@ -94,20 +100,60 @@ func PickRandomDirection():
 		NewDirection=NewDirection.normalized()
 		LastDirection=NewDirection
 
+func Hurt():
+	$Hit.play()
+	AnimatedSprite.play("Hurt")
+	Weakened= true
+	
+
 func UpdateHealth():
 	var HealthBar=$HealthBar
 	HealthBar.value=Health
-	if Health>=10:
+	if Health>=300:
 		HealthBar.visible=false
 	else:
 		HealthBar.visible=true
 		
 func Die():
 	if Health<=0 and not Dead:
-		$Death.play()
+		AnimatedSprite.play("Death")
+		$Die.play()
 		Dead=true
 		#queue_free()
 
 func _on_animated_sprite_2d_animation_finished():
 	if AnimatedSprite.animation=="Death":
 		queue_free()
+	if AnimatedSprite.animation=="Attacking":
+		Player.Health-=20
+		$PlayerHit.play()
+		AnimatedSprite.play("Idle")
+		position-=Vector2(0,5)
+	if AnimatedSprite.animation=="Hurt":
+		Weakened= false
+		AnimatedSprite.play("Idle")
+
+func _on_phamtom_ganon_hitbox_body_entered(body):
+	if body.is_in_group("Player"):
+		PlayerInRange=true
+		AttackSpeed=0
+
+
+func _on_phamtom_ganon_hitbox_body_exited(body):
+	if body.is_in_group("Player"):
+		PlayerInRange=false
+		AttackSpeed=60
+
+
+func _on_territory_body_entered(body):
+	if body.is_in_group("Player"):
+		Player=body
+		Attacking=true
+
+
+func _on_territory_body_exited(body):
+	if body.is_in_group("Player"):
+		Player=null
+		Attacking=false
+		PickRandomDirection()
+		UpdateAnimation(LastDirection)

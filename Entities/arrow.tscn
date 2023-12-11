@@ -1,20 +1,20 @@
 [gd_scene load_steps=6 format=3 uid="uid://t5pcc845em3o"]
 
 [ext_resource type="Script" path="res://Entities/arrow.gd" id="1_815e1"]
-[ext_resource type="Texture2D" uid="uid://cnqtdjfvq2i10" path="res://Sprites/1599744.png" id="1_cwgqc"]
+[ext_resource type="Texture2D" uid="uid://bhxnx5s02tf3m" path="res://Sprites/Items.png" id="2_sxxq2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nva3j"]
-size = Vector2(2.75, 1.75)
+size = Vector2(4, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gcgkc"]
-atlas = ExtResource("1_cwgqc")
-region = Rect2(0, 0, 512, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_oavhy"]
+atlas = ExtResource("2_sxxq2")
+region = Rect2(309, 18, 7, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7pds2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gcgkc")
+"texture": SubResource("AtlasTexture_oavhy")
 }],
 "loop": true,
 "name": &"default",
@@ -27,13 +27,13 @@ script = ExtResource("1_815e1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
 visibility_layer = 3
-position = Vector2(8.625, 0.125)
+position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_nva3j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-3.8147e-06, 9.46224e-07)
-rotation = 2.35619
-scale = Vector2(0.0264957, 0.026607)
+position = Vector2(2, 0)
+rotation = 4.71239
+scale = Vector2(0.7, 1)
 sprite_frames = SubResource("SpriteFrames_7pds2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

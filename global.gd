@@ -1,6 +1,6 @@
 extends Node
 
-var LinkHasSword=false
+var LinkHasSword=true
 var LinkCanShoot=true
 var LinkIsDead=false
 var PlaySwordAnimation=false

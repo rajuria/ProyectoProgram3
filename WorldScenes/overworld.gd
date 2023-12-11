@@ -12,15 +12,7 @@ func _ready():
 func _on_cave_body_entered(body):
 	if body.is_in_group("Player"):
 		Global.LastOverworldPosition = $TileMap/Player.position
-		change_scene = true
-		change_scenes()
-
-func change_scenes():
-	if change_scene == true:
-		if current_scene == "overworld":
-			get_tree().change_scene_to_file("res://WorldScenes/cave.tscn")
-
-
+		get_tree().change_scene_to_file("res://WorldScenes/cave.tscn")
 
 func _on_desert_music_trigger_body_entered(body):
 	if body.is_in_group("Player") and not $DesertMusic.playing:
@@ -42,3 +34,10 @@ func _on_tundra_music_trigger_body_entered(body):
 		$StartingAreaMusic.stop()
 		$DesertMusic.stop()
 		$TundraMusic.play()
+
+
+func _on_desert_temple_body_entered(body):
+	if body.is_in_group("Player"):
+		Global.LastOverworldPosition = $TileMap/Player.position
+		get_tree().change_scene_to_file("res://WorldScenes/inside_desert_temple.tscn")
+
