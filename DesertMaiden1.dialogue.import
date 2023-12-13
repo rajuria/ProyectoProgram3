@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://culha7st20jde"
+path="res://.godot/imported/DesertMaiden1.dialogue-d4fa82b8a4e52dd30de90736ae1e219c.tres"
+
+[deps]
+
+source_file="res://DesertMaiden1.dialogue"
+dest_files=["res://.godot/imported/DesertMaiden1.dialogue-d4fa82b8a4e52dd30de90736ae1e219c.tres"]
+
+[params]
+
+defaults=true

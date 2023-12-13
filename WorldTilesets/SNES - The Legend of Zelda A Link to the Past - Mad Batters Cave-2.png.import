@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnwmceo2m6nnj"
-path="res://.godot/imported/DesertPyramid.png-d4d1af597826d29885e6cdd3e393c4ac.ctex"
+uid="uid://dbu70ivhtvt0v"
+path="res://.godot/imported/SNES - The Legend of Zelda A Link to the Past - Mad Batters Cave-2.png-2e6cb42459a52f15cf8be8e9ec24ed6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WorldTilesets/DesertPyramid.png"
-dest_files=["res://.godot/imported/DesertPyramid.png-d4d1af597826d29885e6cdd3e393c4ac.ctex"]
+source_file="res://WorldTilesets/SNES - The Legend of Zelda A Link to the Past - Mad Batters Cave-2.png"
+dest_files=["res://.godot/imported/SNES - The Legend of Zelda A Link to the Past - Mad Batters Cave-2.png-2e6cb42459a52f15cf8be8e9ec24ed6e.ctex"]
 
 [params]
 

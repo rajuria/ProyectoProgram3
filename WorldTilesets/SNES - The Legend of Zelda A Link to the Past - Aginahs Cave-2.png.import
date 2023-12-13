@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnwmceo2m6nnj"
-path="res://.godot/imported/DesertPyramid.png-d4d1af597826d29885e6cdd3e393c4ac.ctex"
+uid="uid://dev3bk6kj6015"
+path="res://.godot/imported/SNES - The Legend of Zelda A Link to the Past - Aginahs Cave-2.png-6da59d554ce51f6226df9444457e4843.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WorldTilesets/DesertPyramid.png"
-dest_files=["res://.godot/imported/DesertPyramid.png-d4d1af597826d29885e6cdd3e393c4ac.ctex"]
+source_file="res://WorldTilesets/SNES - The Legend of Zelda A Link to the Past - Aginahs Cave-2.png"
+dest_files=["res://.godot/imported/SNES - The Legend of Zelda A Link to the Past - Aginahs Cave-2.png-6da59d554ce51f6226df9444457e4843.ctex"]
 
 [params]
 

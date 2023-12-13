@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bakahv7sr78hk"]
+[gd_scene load_steps=64 format=3 uid="uid://bakahv7sr78hk"]
 
 [ext_resource type="Script" path="res://Entities/player.gd" id="1_6rvay"]
 [ext_resource type="Texture2D" uid="uid://bcax86bfiwoo4" path="res://Sprites/Link1.png" id="2_xktpg"]
@@ -111,6 +111,10 @@ region = Rect2(29, 147, 29, 29)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ekceb"]
 atlas = ExtResource("2_xktpg")
 region = Rect2(58, 147, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8nye"]
+atlas = ExtResource("3_yisfn")
+region = Rect2(116, 210, 29, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fl88p"]
 atlas = ExtResource("3_yisfn")
@@ -368,6 +372,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_d8nye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8nye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8nye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8nye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8nye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8nye")
+}],
+"loop": false,
+"name": &"Falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_fl88p")
 }],
 "loop": true,
@@ -498,8 +525,6 @@ scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_dbick")
 animation = &"DrawBowUp"
 autoplay = "IdleDown"
-frame = 2
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)

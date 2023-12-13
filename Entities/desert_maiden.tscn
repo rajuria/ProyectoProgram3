@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://b8mfsmso1l76g"]
+
+[ext_resource type="Texture2D" uid="uid://bxktaf0peuy12" path="res://Sprites/Maidens.png" id="1_16peb"]
+[ext_resource type="Script" path="res://Entities/desert_maiden.gd" id="1_jxood"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0prqx"]
+atlas = ExtResource("1_16peb")
+region = Rect2(59, 276, 27, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1skly"]
+atlas = ExtResource("1_16peb")
+region = Rect2(86, 276, 27, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qonh"]
+atlas = ExtResource("1_16peb")
+region = Rect2(116, 277, 30, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni6tk"]
+atlas = ExtResource("1_16peb")
+region = Rect2(149, 277, 30, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6clp"]
+atlas = ExtResource("1_16peb")
+region = Rect2(180, 277, 32, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kckps"]
+atlas = ExtResource("1_16peb")
+region = Rect2(214, 277, 32, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yc8t"]
+atlas = ExtResource("1_16peb")
+region = Rect2(246, 277, 27, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5rq0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0prqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1skly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qonh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni6tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6clp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kckps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yc8t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8s47k"]
+radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6q5gm"]
+radius = 21.095
+
+[node name="DesertMaiden" type="CharacterBody2D"]
+script = ExtResource("1_jxood")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5rq0i")
+frame_progress = 0.628931
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8s47k")
+
+[node name="Territory" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Territory"]
+shape = SubResource("CircleShape2D_6q5gm")
+
+[connection signal="body_entered" from="Territory" to="." method="_on_territory_body_entered"]

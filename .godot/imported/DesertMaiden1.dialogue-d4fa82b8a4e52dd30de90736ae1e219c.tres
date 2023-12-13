@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_s5n5f"]
+
+[resource]
+script = ExtResource("1_s5n5f")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Doncella del Desierto")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"3": {
+"character": "Doncella del Desierto",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "Link! Un terrible enemigo se ha aporedado del templo.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Link! Un terrible enemigo se ha aporedado del templo.",
+"type": "dialogue"
+},
+"4": {
+"character": "Doncella del Desierto",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Tienes que buscar el arco y flechas dentro del templo y detenerlo antes de que cause mas danos!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tienes que buscar el arco y flechas dentro del templo y detenerlo antes de que cause mas danos!",
+"type": "dialogue"
+},
+"5": {
+"character": "Doncella del Desierto",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "7",
+"tags": PackedStringArray(),
+"text": "Date prisa, link!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Date prisa, link!",
+"type": "dialogue"
+},
+"7": {
+"id": "7",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.28.0"
