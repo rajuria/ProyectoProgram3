@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://rtiwph0udxj1"]
+
+[ext_resource type="Texture2D" uid="uid://5n0qnrc7v51g" path="res://WorldTilesets/FinalBossRoom.png" id="1_byw1w"]
+[ext_resource type="PackedScene" uid="uid://d2rnf80gfowc5" path="res://Entities/ganondorf.tscn" id="1_yt1qu"]
+[ext_resource type="PackedScene" uid="uid://bakahv7sr78hk" path="res://Entities/player.tscn" id="2_qlquc"]
+[ext_resource type="AudioStream" uid="uid://btkxk074tm1hx" path="res://Sounds/Soundtrack/FinalBoss.mp3" id="4_f1fd5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uubbt"]
+texture = ExtResource("1_byw1w")
+1:0/size_in_atlas = Vector2i(25, 29)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.7886, 231.931, -11.6673, 188.798, -61.8718, 189.505, -68.2358, 233.345)
+1:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-14.5, 84, -14.5, 48, -18.125, 45.25, -41.375, 45.25, -41.875, 14.25, -56.625, 13, -55.6255, 47.2785, -71.5, 47, -71.5, 83, -158.5, 79, -159.5, 173, -71.5, 174, -73.5, 212, -66.5, 213, -65.5, 168, -128.5, 165, -127.5, 113, -40.5, 111, -39.5, 77, -19.5, 75)
+1:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(-76.25, 212.5, -183.75, 212.5, -181.726, 59.397, -103.945, 53.7401, -103.945, -166.877, -77.0746, -168.291, -75.6604, -202.233, -23.3345, -203.647, -21.9203, -192.333, 21.9203, -192.333, 21.9203, -205.061, 72.832, -203.647, 72.832, -171.12, 102.53, -168.291, 103.945, 55.1543, 181.726, 57.9828, 181.726, 214.96, 62.9325, 210.718, 71.4178, 168.291, 62.9325, 169.706, 62.9325, 189.505, 13.435, 190.919, 13.435, 233.345, 201.525, 233.345, 197.283, -231.931, -198.697, -229.103, -198.697, 236.174, -68.5894, 234.759)
+1:0/0/physics_layer_0/polygon_3/points = PackedVector2Array(14.4957, 84.1457, 18.375, 78.25, 37.8302, 79.196, 39.9515, 107.48, 127.633, 111.723, 128.34, 166.877, 64.7003, 165.463, 72.4784, 171.827, 158.745, 171.12, 158.745, 78.4889, 71.7713, 77.7818, 70.3571, 46.6691, 55.625, 45, 54.375, 15, 39.375, 12.75, 39.125, 30.75, 39.3854, 45.854, 16.617, 45.2548)
+1:0/0/physics_layer_0/polygon_4/points = PackedVector2Array(-56, -33.5, -56, -3.5, -41, -3.5, -42, -33.5)
+1:0/0/physics_layer_0/polygon_5/points = PackedVector2Array(41, -32, 40, -3, 55, -3, 54, -32)
+1:0/0/physics_layer_0/polygon_6/points = PackedVector2Array(-41.0122, -79.196, -56.5685, -80.6102, -55.1543, -49.4975, -39.598, -49.4975)
+1:0/0/physics_layer_0/polygon_7/points = PackedVector2Array(41.0122, -79.9031, 39.598, -51.6188, 53.7401, -51.6188, 53.7401, -80.6102)
+1:0/0/physics_layer_0/polygon_8/points = PackedVector2Array(-63, -202, -63, -112, -18, -114, -18, -128, -24, -129, -25, -121, -56, -124, -54, -200)
+1:0/0/physics_layer_0/polygon_9/points = PackedVector2Array(57.9828, -197.99, 56.5685, -121.622, 24.0416, -123.037, 24.0416, -131.522, 18.3848, -131.522, 18.3848, -115.966, 67.8822, -113.137)
+1:0/0/physics_layer_0/polygon_10/points = PackedVector2Array(-43.8406, -142.482, -47.0226, -155.21, -48.0833, -169.706, -17.6777, -170.059, -20.1525, -155.917, -18.7383, -144.603, -21.2132, -140.361, -42.0729, -139.654)
+1:0/0/physics_layer_0/polygon_11/points = PackedVector2Array(16.2635, -170.413, 46.6691, -170.413, 44.5477, -154.856, 43.1335, -142.836, 21.9203, -140.007, 16.9706, -148.492)
+
+[sub_resource type="TileSet" id="TileSet_dxprv"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_uubbt")
+
+[node name="FinalBossRoom" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_dxprv")
+format = 2
+layer_0/tile_data = PackedInt32Array(917516, 65536, 0)
+
+[node name="Ganondorf" parent="." instance=ExtResource("1_yt1qu")]
+position = Vector2(198, 129)
+
+[node name="Player" parent="." instance=ExtResource("2_qlquc")]
+position = Vector2(198, 394)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2.9, 2.9)
+limit_left = 0
+limit_top = 0
+limit_right = 400
+limit_bottom = 463
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_f1fd5")
+autoplay = true

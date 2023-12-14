@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://co36a74hlivg0"]
+
+[ext_resource type="Texture2D" uid="uid://cm2utcqp8rj0e" path="res://WorldTilesets/CastleInterior.png" id="1_t655g"]
+[ext_resource type="PackedScene" uid="uid://bakahv7sr78hk" path="res://Entities/player.tscn" id="2_qatnc"]
+[ext_resource type="AudioStream" uid="uid://dpglwa4xjsl44" path="res://Sounds/Soundtrack/06. Majestic Castle.mp3" id="3_kqyai"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7j33b"]
+texture = ExtResource("1_t655g")
+0:0/size_in_atlas = Vector2i(33, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-42, 180, -25.5, 180.5, -26, 195.5, -41, 195)
+0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-41.5, 149, -41, 162.5, -27.5, 164, -27, 148.5)
+0:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(-72, 210, -70, 102, -152, 96, -184, 66, -180, 46, -224, 36, -162, 138, -118, 148, -114, 250, -8, 257, -6, 212)
+0:0/0/physics_layer_0/polygon_3/points = PackedVector2Array(-139, -45, -139, -74, -137, -155, -10, -155, -2, -145, -2, -117, -9, -118, -10, -93, -41, -92, -41, -120, -103, -122, -106, -52)
+0:0/0/physics_layer_0/polygon_4/points = PackedVector2Array(-167.584, -44.5477, -168.291, -82.7315, -205.768, -84.8528, -229, -86, -229, 11, -184, 18, -185, -52)
+0:0/0/physics_layer_0/polygon_5/points = PackedVector2Array(198, 42, 200, 68, 166, 100, 86, 100, 82, 210, 20, 210, 18, 250, 130, 256, 132, 146, 244, 68, 242, 34)
+0:0/0/physics_layer_0/polygon_6/points = PackedVector2Array(-205.061, -111.723, -205.061, -124.451, -152.735, -172.534, -4.24265, -176.777, -8.48529, -200.818, -152.735, -203.647, -231.931, -125.865, -231.931, -110.309)
+0:0/0/physics_layer_0/polygon_7/points = PackedVector2Array(19.799, -148.492, 19.799, -115.966, 21.2132, -90.5097, 53.7401, -91.9239, 52.3259, -118.794, 117.38, -121.622, 121.622, -53.7401, 148.492, -52.3259, 149.907, -39.598, 154.149, -42.4264, 155.564, -74.9533, 147.078, -77.7818, 149.907, -152.735)
+0:0/0/physics_layer_0/polygon_8/points = PackedVector2Array(181, -44, 182, -81, 220, -84, 220, 14, 198, 16, 198, -50)
+0:0/0/physics_layer_0/polygon_9/points = PackedVector2Array(21.9203, -175.362, 20.5061, -202.233, 167.584, -207.889, 239.709, -128.693, 242.538, -82.0244, 221.324, -82.0244, 221.324, -123.037, 170.413, -175.362)
+0:0/0/physics_layer_0/polygon_10/points = PackedVector2Array(37.75, 180.5, 37.75, 194, 54.25, 195.5, 53.25, 180.5)
+0:0/0/physics_layer_0/polygon_11/points = PackedVector2Array(37.4767, 147.078, 38.8909, 164.049, 54.4472, 164.049, 54.4472, 151.321)
+0:0/0/physics_layer_0/polygon_12/points = PackedVector2Array(-38.8909, 115.965, -38.8909, 131.522, -27.5772, 131.522)
+0:0/0/physics_layer_0/polygon_13/points = PackedVector2Array(38.7141, 115.966, 38.007, 131.875, 53.5633, 131.875, 53.5633, 117.026)
+0:0/0/physics_layer_0/polygon_14/points = PackedVector2Array(-41.3657, 84.1457, -39.9515, 100.409, -26.5165, 100.409, -27.2236, 84.8528)
+0:0/0/physics_layer_0/polygon_15/points = PackedVector2Array(38.25, 85, 38.75, 100.5, 54.25, 100.5, 53.75, 83.5)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mp37n"]

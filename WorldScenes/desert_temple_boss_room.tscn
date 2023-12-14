@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://w1f36i8cev23"]
+[gd_scene load_steps=11 format=3 uid="uid://w1f36i8cev23"]
 
+[ext_resource type="Script" path="res://WorldScenes/desert_temple_boss_room.gd" id="1_ejcig"]
 [ext_resource type="Texture2D" uid="uid://b5fj7xi8m8rkm" path="res://WorldTilesets/desert_.png" id="1_kp2ww"]
 [ext_resource type="PackedScene" uid="uid://blub56e27wdqn" path="res://Entities/phantom_ganon.tscn" id="2_qunbd"]
 [ext_resource type="PackedScene" uid="uid://bakahv7sr78hk" path="res://Entities/player.tscn" id="3_tekvp"]
@@ -373,13 +374,16 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s0vew")
 sources/1 = SubResource("TileSetAtlasSource_qvf7e")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1r31"]
+size = Vector2(54, 48)
+
 [node name="DesertTempleBossRoom" type="Node2D"]
 z_index = 1
+script = ExtResource("1_ejcig")
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
 position = Vector2(3.05176e-05, 0)
-scale = Vector2(1, 1)
 tile_set = SubResource("TileSet_bbg4i")
 format = 2
 layer_0/z_index = 1
@@ -396,7 +400,6 @@ light_mask = 7
 visibility_layer = 7
 z_index = 2
 position = Vector2(394, 145)
-scale = Vector2(1, 1)
 collision_layer = 3
 collision_mask = 3
 
@@ -420,3 +423,11 @@ limit_bottom = 800
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_k3bn6")
 autoplay = true
+
+[node name="ExitRoom" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitRoom"]
+position = Vector2(239, 129)
+shape = SubResource("RectangleShape2D_f1r31")
+
+[connection signal="body_entered" from="ExitRoom" to="." method="_on_exit_room_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bakahv7sr78hk"]
+[gd_scene load_steps=65 format=3 uid="uid://bakahv7sr78hk"]
 
 [ext_resource type="Script" path="res://Entities/player.gd" id="1_6rvay"]
 [ext_resource type="Texture2D" uid="uid://bcax86bfiwoo4" path="res://Sprites/Link1.png" id="2_xktpg"]
@@ -7,6 +7,10 @@
 [ext_resource type="AudioStream" uid="uid://c1viup2g7ynp6" path="res://Sounds/Effects/link-death.mp3" id="4_uqyjs"]
 [ext_resource type="AudioStream" uid="uid://cnr61ldh742th" path="res://Sounds/Effects/link-hurt.mp3" id="5_qlyfg"]
 [ext_resource type="AudioStream" uid="uid://cp3kfjc3k76co" path="res://Sounds/Effects/arrow 2.wav" id="7_sgjvl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuunu"]
+atlas = ExtResource("3_yisfn")
+region = Rect2(353, 216, 35, 46)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ke663"]
 atlas = ExtResource("2_xktpg")
@@ -222,6 +226,14 @@ region = Rect2(210, 120, 24, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dbick"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuunu")
+}],
+"loop": true,
+"name": &"AcquireTriforce",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ke663")
@@ -523,7 +535,7 @@ script = ExtResource("1_6rvay")
 position = Vector2(1, 1)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_dbick")
-animation = &"DrawBowUp"
+animation = &"AcquireTriforce"
 autoplay = "IdleDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

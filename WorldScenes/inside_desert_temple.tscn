@@ -3669,7 +3669,7 @@ position = Vector2(438, 375)
 position = Vector2(473, 238)
 
 [node name="Bow" parent="TileMap" instance=ExtResource("6_1emdc")]
-position = Vector2(503, 324)
+position = Vector2(245, 302)
 
 [node name="Overworld" type="Area2D" parent="TileMap"]
 

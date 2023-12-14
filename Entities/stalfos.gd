@@ -108,7 +108,7 @@ func PickRandomDirection():
 func UpdateHealth():
 	var HealthBar=$HealthBar
 	HealthBar.value=Health
-	if Health>=50:
+	if Health>=75:
 		HealthBar.visible=false
 	else:
 		HealthBar.visible=true

@@ -104,7 +104,6 @@ func UpdateHealth():
 func Die():
 	if Health<=0 and not Global.LinkIsDead:
 		Global.LinkIsDead=true
-		Global.LastOverworldPosition= position
 		AnimatedSprite.play("Death")
 		$Death.play()
 
@@ -126,3 +125,4 @@ func _on_animated_sprite_2d_animation_finished():
 	if AnimatedSprite.animation=="DrawBowUp" || AnimatedSprite.animation=="DrawBowDown" || AnimatedSprite.animation=="DrawBowRight" :
 		Shoot()
 		DrawingBow=false
+		

@@ -48,3 +48,9 @@ func _on_desert_boss_room_body_entered(body):
 		Global.LastOverworldPosition = $TileMap/Player.position-Vector2(0,5)
 		get_tree().change_scene_to_file("res://WorldScenes/desert_temple_boss_room.tscn")
 
+
+
+func _on_hyrule_castle_body_entered(body):
+	if body.is_in_group("Player"):
+		Global.LastOverworldPosition = $TileMap/Player.position-Vector2(0,5)
+		get_tree().change_scene_to_file("res://WorldScenes/hyrule_castle_interior.tscn")

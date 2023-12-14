@@ -123,6 +123,7 @@ func Die():
 
 func _on_animated_sprite_2d_animation_finished():
 	if AnimatedSprite.animation=="Death":
+		Global.PhantomGanonDefeated=true
 		queue_free()
 	if AnimatedSprite.animation=="Attacking":
 		Player.Health-=20
